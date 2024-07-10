@@ -1,0 +1,43 @@
+---
+import ContactForm from "./contactForm.astro";
+---
+
+<aside>
+	<h2>¿Quieres que trabajemos juntos?</h2>
+	<ContactForm/>
+	
+</aside>
+
+<style>
+	aside {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		gap: 5rem;
+		align-items: center;
+		border-top: 1px solid var(--gray-800);
+		border-bottom: 1px solid var(--gray-800);
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	h2 {
+		font-size: var(--text-xl);
+		text-align: center;
+		max-width: 15ch;
+	}
+
+	@media (min-width: 50em) {
+		aside {
+			padding: 7.5rem;
+			flex-direction: row;
+			flex-wrap: wrap;
+			
+		}
+
+		h2 {
+			font-size: var(--text-3xl);
+			text-align: left;
+		}
+	}
+</style>

@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import TechGrid from '../components/TechGrid.astro';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+import Hero from '../components/Hero.astro';
+import Grid from '../components/Grid.astro';
+
+const projects = (await getCollection('work')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<BaseLayout
+	title="Mi Trabajo | Busch Franco"
+	description="Informa sobre algunos trabajos de Franco Busch"
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="Trabajos Destacados"
+				tagline="Algúnos de mis trabajos destacados para obtener una idea de mi experiencia"
+				align="start"
+			/>
+			<a target="_blank" href="https://github.com/BuschFranco/Intelli.dev"><h5>Repositorio de este portafolio (Desarrollado con Astro 🚀)</h5></a>
+			
+			<Grid variant="offset">
+				{
+					projects.map((project) => (
+						<li>
+							<PortfolioPreview project={project} />
+						</li>
+					))
+				}
+			</Grid>
+			<header class="techHead stack gap-2 lg:gap-4">
+				<h3>Tecnologías utilizadas</h3>
+				<TechGrid/>
+			</header>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.techHead{
+		margin-top: 2rem;
+		text-align: center;
+	}
+</style>

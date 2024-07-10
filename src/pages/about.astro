@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="Sobre Mí | Busch Franco" description="Información sobre Franco Busch">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Sobre Mí"
+				tagline="Te comento un poco más sobre mí y mi experiencia"
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Imagen de Franco Busch"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Experiencia</h2>
+				<div class="content">
+					<p>
+						Me llamo Franco Busch, originario de Buenos Aires, Argentina. Mi enfoque profesional se centra en el desarrollo web, la programación y las nuevas tecnologías.
+						Desde mi infancia, he tenido una afinidad con la informática, reconociéndola como una puerta esencial hacia el ámbito laboral y el desarrollo global.
+					</p>
+					<p>
+						<br>
+						Trabajé como desarrollador de software, donde participé en la creación de una aplicación ERP de gestión financiera usando Microsoft Dynamics 365, con lenguajes como X++ y C# entre otros. Formé parte de un equipo de desarrollo donde además, colaboramos estrechamente con un equipo de testing en Brasil, que era parte del cliente. Trabajamos utilizando metodologías waterfall, siguiendo un proceso lineal y estructurado para completar cada fase del proyecto antes de avanzar a la siguiente.
+
+Antes de desarrollar el ERP, trabajé como freelance realizando desarrollos web para algunas pymes. En estos proyectos, utilicé lenguajes y tecnologías como JavaScript, PHP y frameworks como Bootstrap y React, creando soluciones personalizadas y funcionales.
+					</p>
+					<p>
+						<br>
+						Actualmente, estoy aprendiendo inglés y sigo haciendo desarrollos web. Además, practico con tecnologías como C# y Python para seguir mejorando mis habilidades y mantenerme actualizado.
+
+Estoy entusiasmado por seguir creciendo, aprendiendo y contribuyendo al progreso continuo en el campo de la tecnología y el desarrollo.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Habilidades</h2>
+				<div class="content">
+					<ul>
+						<li>Actitud Resolutiva</li>
+						<li>Metodologías Ágiles y Waterfall</li>
+						<li>Creativo</li>
+						<li>Buen manejo del Inglés</li>
+						<li>Detallista</li>
+						<li>Rápida Adaptación</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
