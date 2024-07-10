@@ -1,7 +1,7 @@
 ---
 title: Intelli.dev (Página de desarrollos)
 publishDate: 2020-03-02 00:00:00
-img: /assets/intellidev.jpg
+img: /assets/intellidev.webp
 img_alt: una imagen de la ventana principal de la página
 description: |
   Intelli.dev es un proyecto en donde me especializo en desarrollos web. Además, ofrezco soluciones en desarrollo móvil y aplicaciones nativas, adaptándome a las necesidades específicas de cada cliente para entregar productos ideales.

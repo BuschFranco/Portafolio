@@ -1,7 +1,7 @@
 ---
 title: Desarrollo en Unity
 publishDate: 2020-03-04 00:00:00
-img: /assets/projectunity.jpg
+img: /assets/projectunity.webp
 img_alt: Una imagen de la aplicación de Unity ejecutando el videojuego
 description: |
   Estoy desarrollando un videojuego arcade utilizando Unity y C#. En este proyecto, me encargo de la programación de la lógica del juego, la implementación de mecánicas de juego y la integración de gráficos y sonidos para crear una experiencia entretenida.
