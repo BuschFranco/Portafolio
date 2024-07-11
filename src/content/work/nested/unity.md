@@ -23,3 +23,11 @@ Para el hack and slash, aprovecho las capacidades de Unity para gestionar sistem
 El uso de pixel art en entornos 3D combina el encanto retro con la jugabilidad moderna y la optimización eficiente del rendimiento del juego en diferentes plataformas. Esto no solo asegura una experiencia visualmente atractiva, sino que también garantiza que mis juegos funcionen sin problemas en una variedad de dispositivos.
 
 En resumen, mi enfoque en Unity no solo se centra en la creación técnica de juegos, sino también en la creación de experiencias de juego que entretengan a los jugadores.
+
+##### Anteriormente a este
+
+Anteriormente, desarrollé un videojuego de terror (o al menos un intento de terror, jaja!) en el que los jugadores deben atravesar un bosque por la noche mientras son perseguidos por un enemigo. Este proyecto incluía componentes survival, ofreciendo una experiencia más emocionante.
+
+![Imagen de juego de terror](/assets/terror.webp)
+
+
