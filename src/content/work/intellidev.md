@@ -11,7 +11,7 @@ tags:
   - Full-Stack
 ---
 
-### <a target="_blank" href="https://buschfranco.github.io/Intelli.dev">Visitar la página</a>
+### <a target="_blank" href="https://intellidev.vercel.app">Visitar la página</a>
 #### <a target="_blank" href="https://github.com/BuschFranco/Intelli.dev">Repositorio de la página</a>
 
 #### De que trata la web?
