@@ -24,7 +24,7 @@ El uso de pixel art en entornos 3D combina el encanto retro con la jugabilidad m
 
 En resumen, mi enfoque en Unity no solo se centra en la creación técnica de juegos, sino también en la creación de experiencias de juego que entretengan a los jugadores.
 
-##### Anteriormente a este
+##### Anteriormente a éste
 
 Anteriormente, desarrollé un videojuego de terror (o al menos un intento de terror, jaja!) en el que los jugadores deben atravesar un bosque por la noche mientras son perseguidos por un enemigo. Este proyecto incluía componentes survival, ofreciendo una experiencia más emocionante.
 
