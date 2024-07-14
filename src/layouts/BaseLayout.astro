@@ -9,8 +9,6 @@ import Footer from '../components/Footer.astro';
 
 import Snippet from "@astrojs/partytown";
 
-import GoogleAnalytics from '../components/GoogleAnalytics.astro';
-
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
@@ -19,10 +17,16 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
+		<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-7JF7N166QF"></script>
 		<Snippet>
-			<GoogleAnalytics/>
+			{`
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', 'G-7JF7N166QF');
+			  `}
 
 		<Snippet/>
 		
