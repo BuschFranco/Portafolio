@@ -7,8 +7,6 @@ import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
-import Snippet from "@astrojs/partytown";
-
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
@@ -20,16 +18,13 @@ const { title, description } = Astro.props;
 <html lang="es">
 	<head>
 		
-		<Snippet>
-			{`
-				<script async src="https://www.googletagmanager.com/gtag/js?id=G-7JF7N166QF"></script>
-				window.dataLayer = window.dataLayer || [];
-				function gtag(){dataLayer.push(arguments);}
-				gtag('js', new Date());
-				gtag('config', 'G-7JF7N166QF');
-			  `}
-
-		<Snippet/>
+			
+		<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-7JF7N166QF"></script>
+		<script type="text/partytown">window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-7JF7N166QF');</script>
+			
 		
 		<MainHead title={title} description={description} />
 	</head>
