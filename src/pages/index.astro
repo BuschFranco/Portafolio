@@ -33,8 +33,8 @@ const projects = (await getCollection('work'))
 					align="start"
 				>
 					<div class="roles">
-						<a download="CV-BuschFranco" href="assets/BuschFrancoCV.pdf"><Pill>Descargar Curriculum</Pill></a>
-						<a href="/curriculum"><Pill>Ver Curriculum Online</Pill></a>
+						<a download="CV-BuschFranco" href="assets/BuschFrancoCV.pdf"><span class="but">Descargar Curriculum<span></a>
+						<a href="/curriculum"><span class="but">Ver Curriculum Online</span></a>
 						
 						
 					</div>
@@ -92,6 +92,34 @@ const projects = (await getCollection('work'))
 </BaseLayout>
 
 <style>
+
+	.but {
+		display: flex;
+		padding: 0.5rem 1rem;
+		gap: 0.5rem;
+		color: var(--accent-text-over);
+		border: 1px solid var(--accent-regular);
+		background-color: var(--accent-regular);
+		border-radius: 999rem;
+		font-size: var(--text-md);
+		line-height: 1.35;
+		white-space: nowrap;
+
+		font-weight: 600;
+
+		background-image: linear-gradient(0deg,#7611a6,#c561f6,#7611a6,#c561f6);
+        background-size: 100% 300%;
+        animation: animateBg 7s infinite;
+
+		transition: 0.3s;
+	}.but:hover{
+		box-shadow: 0px 0px 15px #c561f6;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
 	.hero {
 		display: flex;
 		flex-direction: column;
@@ -238,4 +266,9 @@ const projects = (await getCollection('work'))
 			height: 9.5rem;
 		}
 	}
+
+	@keyframes animateBg {
+     0% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+}
 </style>
