@@ -12,7 +12,6 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import TechGrid from "../components/TechGrid.astro";
-import ContactForm from "../components/contactForm.astro";
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -34,7 +33,7 @@ const projects = (await getCollection('work'))
 					align="start"
 				>
 					<div class="roles">
-						<a download="CV-BuschFranco" href="/src/content/BuschFrancoCV.pdf"><Pill>Descargar Curriculum</Pill></a>
+						<a download="CV-BuschFranco" href="assets/BuschFrancoCV.pdf"><Pill>Descargar Curriculum</Pill></a>
 						<a href="/curriculum"><Pill>Ver Curriculum Online</Pill></a>
 						
 						
