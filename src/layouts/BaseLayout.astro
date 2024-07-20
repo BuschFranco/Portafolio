@@ -13,9 +13,11 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+
+const {currentLocale} = Astro;
 ---
 
-<html lang="es">
+<html lang={currentLocale}>
 	<head>
 		<MainHead title={title} description={description} />
 	</head>

@@ -1,0 +1,33 @@
+---
+title: Desarrollo en Unity
+publishDate: 2020-03-04 00:00:00
+img: /assets/projectunity.webp
+img_alt: Una imagen de la aplicación de Unity ejecutando el videojuego
+description: |
+  Estoy desarrollando un videojuego arcade utilizando Unity y C#. En este proyecto, me encargo de la programación de la lógica del juego, la implementación de mecánicas de juego y la integración de gráficos y sonidos para crear una experiencia entretenida.
+tags:
+  - Diseño
+  - Desarrollo
+  - Backend
+  - Creativo
+---
+
+#### Desarrollo de videojuego con Unity
+
+Mi enfoque en el desarrollo del juego en Unity combina creatividad con tecnología para crear una experiencia atractiva y entretenida. Utilizo Unity para construir un juego arcade con elementos de hack and slash, todo con un estilo visual de pixel art 3D que aporta nostalgia y belleza a la vez.
+
+En el corazón del desarrollo están las herramientas potentes de Unity, que me permiten crear gráficos 3D, animaciones fluidas y físicas realistas. Programo en C# para implementar la lógica del juego, desde el comportamiento de los personajes hasta la interacción del jugador con el entorno.
+
+Para el hack and slash, aprovecho las capacidades de Unity para gestionar sistemas de combate dinámicos y diseñar niveles que desafían a los jugadores de manera estratégica.
+
+El uso de pixel art en entornos 3D combina el encanto retro con la jugabilidad moderna y la optimización eficiente del rendimiento del juego en diferentes plataformas. Esto no solo asegura una experiencia visualmente atractiva, sino que también garantiza que mis juegos funcionen sin problemas en una variedad de dispositivos.
+
+En resumen, mi enfoque en Unity no solo se centra en la creación técnica de juegos, sino también en la creación de experiencias de juego que entretengan a los jugadores.
+
+##### Anteriormente a éste
+
+Anteriormente, desarrollé un videojuego de terror (o al menos un intento de terror, jaja!) en el que los jugadores deben atravesar un bosque por la noche mientras son perseguidos por un enemigo. Este proyecto incluía componentes survival, ofreciendo una experiencia más emocionante.
+
+![Imagen de juego de terror](/assets/terror.webp)
+
+

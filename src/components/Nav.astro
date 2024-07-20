@@ -2,13 +2,21 @@
 import Icon from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import type { iconPaths } from './IconPaths';
+import LanguagePicker from "./LanguagePicker.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const {currentLocale} = Astro;
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Inicio', href: '/' },
-	{ label: 'Trabajo', href: '/work/' },
-	{ label: 'Sobre Mí', href: '/about/' },
-	{ label: 'Curriculum', href: '/curriculum/' }
+	{ label: t("nav.home"), href: getRelativeLocaleUrl(currentLocale ?? "","") },
+	{ label: t("nav.work"), href: getRelativeLocaleUrl(currentLocale ?? "","work") },
+	{ label: t("nav.about"), href: getRelativeLocaleUrl(currentLocale ?? "","about") },
+	{ label: t("nav.curriculum"), href: getRelativeLocaleUrl(currentLocale ?? "","curriculum") }
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -16,14 +24,17 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	{ label: 'Linkedin', href: 'https://www.linkedin.com/in/francobusch/', icon: 'linkedin-logo' },
 	{ label: 'GitHub', href: 'https://github.com/BuschFranco', icon: 'github-logo' },
 ];
+
+
 ---
 
 <nav>
 	<div class="menu-header">
-		<a href="/" class="site-title">
+		<a href={getRelativeLocaleUrl(currentLocale ?? "","")} class="site-title">
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
 			Franco Busch
 		</a>
+		<LanguagePicker />
 		<menu-button>
 			<template>
 				<button class="menu-button" aria-expanded="false">

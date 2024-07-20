@@ -1,0 +1,65 @@
+---
+import Hero from '../../components/Hero.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Pill from '../../components/Pill.astro';
+---
+
+<BaseLayout title="Curriculum Online | Busch Franco" description="404 Error — this page was not found">
+	<Hero title="Curriculum Online" tagline="Explore my background and technical skills." />
+
+    <iframe id="cv" src="/assets/BuschFrancoCV.pdf">
+        This browser does not support PDF viewing.
+
+    </iframe>
+    <a download="CV-BuschFranco" href="/assets/BuschFrancoCV.pdf"><span class="but">Download Resume</span></a>
+</BaseLayout>
+
+<style>     
+    #cv {
+            display: block;
+            margin: auto;
+            width: 100%;
+            max-width: 700px;
+            height: 80vh;
+            border: none;
+        }
+
+        @media (min-width: 768px) {
+            #cv {
+                width: 80%;
+                height: 800px;
+            }
+        }
+
+    a{
+        display: flex;
+        margin: auto;
+        margin-top: 2rem;
+
+        text-decoration: none;
+    }
+
+    .but {
+		display: flex;
+		padding: 0.5rem 1rem;
+		gap: 0.5rem;
+		color: var(--accent-text-over);
+		border: 1px solid var(--accent-regular);
+		background-color: var(--accent-regular);
+		border-radius: 999rem;
+		font-size: var(--text-md);
+		line-height: 1.35;
+		white-space: nowrap;
+
+		font-weight: 600;
+
+		background-image: linear-gradient(0deg,#7611a6,#c561f6,#7611a6,#c561f6);
+        background-size: 100% 300%;
+        animation: animateBg 7s infinite;
+
+		transition: 0.3s;
+	}.but:hover{
+		box-shadow: 0px 0px 15px #c561f6;
+	}
+    
+</style>

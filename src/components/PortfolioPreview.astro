@@ -6,6 +6,12 @@ interface Props {
 }
 
 const { data, slug } = Astro.props.project;
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <a class="card" href={`/work/${slug}`}>

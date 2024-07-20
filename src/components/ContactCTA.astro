@@ -1,9 +1,14 @@
 ---
 import ContactForm from "./contactForm.astro";
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <aside>
-	<h2>¿Quieres que trabajemos juntos?</h2>
+	<h2>{t("contact.t")}</h2>
 	<ContactForm/>
 	
 </aside>

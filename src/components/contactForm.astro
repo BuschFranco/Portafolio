@@ -1,16 +1,19 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div id="conteinerContact">
 
     <div id="conteinerInfo">
         <div>
-            <h5>Correo</h5>
+            <h5>{t("contact.cor")}</h5>
             <p>contacto@buschfranco.com</p>
         </div>
         <div>
-            <h5>Móvil</h5>
+            <h5>{t("contact.cel")}</h5>
             <p>(+54) 1131506458</p>
         </div>
         <div>
@@ -26,7 +29,7 @@
         <form action="https://formspree.io/f/xdknkazv"
         method="POST">
             <div>
-              <label for="nombre">Nombre</label>
+              <label for="nombre">{t("contact.na")}</label>
               <input name="name" placeholder="Ej: Jonathan" required>
             </div>
             <div>
@@ -34,14 +37,14 @@
               <input type="email" name="email" placeholder="Ej: email@gmail.com" required>
             </div>
             <div>
-              <label for="tel">Teléfono (opcional)</label>
+              <label for="tel">{t("contact.tel")}</label>
               <input type="tel" name="telefono" placeholder="Ej: (+54) 1131506458">
             </div>
             <div >
-              <label for="mensaje">Coméntame sobre tu idea o consulta </label>
+              <label for="mensaje">{t("contact.des")}</label>
               <textarea name="consulta" rows="3" required></textarea>
             </div>
-            <button type="submit">Enviar</button>
+            <button type="submit">{t("contact.send")}</button>
           </form>
     </div>
 

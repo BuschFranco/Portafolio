@@ -1,22 +1,27 @@
 ---
 import Icon from './Icon.astro';
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="box skills">
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Full Stack</h2>
-		<p>Creación de aplicaciones web y móviles. Manejo tanto el frontend como el backend, asegurando soluciones integrales, eficientes y escalables.</p>
+		<p>{t("skill.fs")}</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Resolutivo</h2>
-		<p>Muy bueno ofreciendo soluciones efectivas. Mi enfoque proactivo y analítico me permite resolver desafíos de manera eficiente, garantizando la continuidad y éxito de los proyectos.</p>
+		<h2>{t("skill.t1")}</h2>
+		<p>{t("skill.r")}</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Atención al Detalle</h2>
-		<p>En un proyecto, esta habilidad permite detectar y corregir errores a tiempo, asegurando la entrega exitosa de un producto.</p>
+		<h2>{t("skill.t2")}</h2>
+		<p>{t("skill.da")}</p>
 	</div>
 </section>
 
