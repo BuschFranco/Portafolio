@@ -5,10 +5,38 @@ import { getLangFromUrl, useTranslatedPath } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 ---
-<ul>
+<div class="lng">
   {Object.entries(languages).map(([lang, label]) => (
-    <li>
+    <div class="btn">
       <a href={translatePath('/', lang)}>{label}</a>
-    </li>
+    </div>
+      
   ))}
-</ul>
+</div>
+
+<style>
+
+
+  .lng{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0px 0px 7px black;
+
+    transition: 0.2s;
+  }a:hover{
+    text-shadow: 0px 0px 15px #ae00ff;
+
+    background-color: #ae00ff52;
+    border-radius: 0.8rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+
+</style>

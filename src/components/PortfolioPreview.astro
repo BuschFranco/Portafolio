@@ -8,13 +8,14 @@ interface Props {
 const { data, slug } = Astro.props.project;
 
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const {currentLocale} = Astro;
 ---
 
-<a class="card" href={`/work/${slug}`}>
+<a class="card" href={`${currentLocale === 'en' ? '/en' : ''}/work/${slug}`}>
 	<span class="title">{data.title}</span>
 	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 </a>
