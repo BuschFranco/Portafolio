@@ -6,8 +6,18 @@ interface Props {
 	description?: string | undefined;
 }
 
-const {
-	title = 'Busch Franco | Portafolio',
+const {currentLocale} = Astro;
+
+let titleEn;
+
+if(currentLocale == "en"){
+	titleEn = "Portfolio";
+} else{
+	titleEn = "Portafolio";
+}
+
+let {
+	title = 'Busch Franco | ' + titleEn,
 	description = 'Franco Busch, desarrollador web y de software en Buenos Aires. Portafolio de proyectos para empresas y pymes, utilizando tecnologías como PHP, JavaScript y Dynamics 365. Soluciones a medida para tu negocio.',
 } = Astro.props;
 ---
