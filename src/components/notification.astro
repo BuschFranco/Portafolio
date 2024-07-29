@@ -1,14 +1,21 @@
 ---
+const {currentLocale} = Astro;
+
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 
+let linkEn = '/work/intellidev';
+if(currentLocale == "en"){
+    linkEn = '/en/work/en/intellidev'
+}
+
 ---
 
 
-<a href="/work/intellidev">
+<a href={`${linkEn}`}>
      <div>
          <h5>{t("notification.title")}</h5>
          <p>{t("notification.description")}</p>
