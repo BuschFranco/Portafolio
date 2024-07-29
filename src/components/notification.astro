@@ -1,0 +1,105 @@
+
+<a href="/work/intellidev">
+     <div>
+         <h5>¿Buscas una página web para tu proyecto o negocio?</h5>
+         <p>Click para más información</p>
+    </div>
+</a>
+    
+
+<style>
+    div{
+        position: fixed;
+
+        width: 50vh;
+
+        background-image: linear-gradient(0deg,#7611a6,#c561f6,#7611a6,#c561f6);
+        background-size: 100% 300%;
+
+        bottom: 0%;
+
+        border-radius: 2rem 0rem 2rem 0rem;
+        padding: 1.7rem;
+        margin: 1rem;
+
+        transition: 0.5s;
+    }
+
+    a{
+        position: relative;
+        text-decoration: none;
+        z-index: 100;
+
+        animation: show 1.5s, hide 1.5s 8s forwards;
+
+        
+    }a:hover{
+        div{
+            box-shadow: -5px 5px 0px rgb(255, 255, 255);
+            
+        }
+    }
+
+    h5,p{
+        color: white;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+    }
+
+    @keyframes show {
+    from {
+      opacity: 0;
+      left: -40%; 
+    }
+    to {
+      opacity: 1;
+      left: 0%;
+    }
+  }
+
+  /* Media queries for tablets */
+  @media (max-width: 768px) {
+        div {
+            width: 70vw;
+            padding: 1.2rem;
+            margin: 0.5rem;
+        }
+
+        h5 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Media queries for mobile devices */
+    @media (max-width: 480px) {
+        div {
+            width: 90vw;
+            padding: 1rem;
+            margin: 0.5rem;
+        }
+
+        h5 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+
+    @keyframes hide {
+        from {
+            opacity: 1;
+            left: 0%;
+        }
+        to {
+            opacity: 0;
+            left: -40%; 
+            display: none;
+        }
+    }
+</style>
+
