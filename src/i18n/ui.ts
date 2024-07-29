@@ -26,6 +26,9 @@ export const languages = {
       "contact.tel":"Teléfono (opcional)",
       "contact.des":"Coméntame sobre tu idea o consulta",
       "contact.send":"Enviar",
+
+      "notification.title":"¿Buscas una página web para tu proyecto o negocio?",
+      "notification.description":"Click para más información",
     },
     en: {
       'nav.home': 'Home',
@@ -46,5 +49,8 @@ export const languages = {
       "contact.tel":"Phone (optional)",
       "contact.des":"Tell me about your idea or inquiry.",
       "contact.send":"Send",
+
+      "notification.title":"Do you want a web page for your project or business?",
+      "notification.description":"Click for more information",
     },
   } as const;

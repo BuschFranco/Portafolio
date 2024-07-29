@@ -1,8 +1,17 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+
+---
+
 
 <a href="/work/intellidev">
      <div>
-         <h5>¿Buscas una página web para tu proyecto o negocio?</h5>
-         <p>Click para más información</p>
+         <h5>{t("notification.title")}</h5>
+         <p>{t("notification.description")}</p>
     </div>
 </a>
     
