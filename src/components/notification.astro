@@ -8,15 +8,29 @@
     
 
 <style>
-    div{
-        position: fixed;
 
+    a{
+        position: fixed;
+        bottom: 0%;
+        
+        text-decoration: none;
+        z-index: 100;
+
+        animation: show 1.5s, hide 1.5s 8s forwards;
+
+        overflow: hidden;
+    }a:hover{
+        div{
+            box-shadow: -5px 5px 0px rgb(255, 255, 255);
+            
+        }
+    }
+
+    div{
         width: 50vh;
 
         background-image: linear-gradient(0deg,#7611a6,#c561f6,#7611a6,#c561f6);
         background-size: 100% 300%;
-
-        bottom: 0%;
 
         border-radius: 2rem 0rem 2rem 0rem;
         padding: 1.7rem;
@@ -25,20 +39,7 @@
         transition: 0.5s;
     }
 
-    a{
-        position: relative;
-        text-decoration: none;
-        z-index: 100;
 
-        animation: show 1.5s, hide 1.5s 8s forwards;
-
-        
-    }a:hover{
-        div{
-            box-shadow: -5px 5px 0px rgb(255, 255, 255);
-            
-        }
-    }
 
     h5,p{
         color: white;
