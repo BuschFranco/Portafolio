@@ -13,9 +13,17 @@ if(currentLocale == "en"){
 }
 
 ---
+<script>
+    const enlace = document.getElementById("enlace")
+    const active = () =>{
+        enlace.classList.add("active")
+    }
+
+    setTimeout(active, 2000);
+</script>
 
 
-<a href={`${linkEn}`}>
+<a id="enlace" href={`${linkEn}`}>
      <div>
          <h5>{t("notification.title")}</h5>
          <p>{t("notification.description")}</p>
@@ -25,14 +33,21 @@ if(currentLocale == "en"){
 
 <style>
 
+
+    .active{
+        opacity: 1;
+
+        animation: show 1.5s, hide 1.5s 8s forwards;
+    }
+
     a{
+        opacity: 0;
+
         position: fixed;
         bottom: 0%;
         
         text-decoration: none;
         z-index: 100;
-
-        animation: show 1.5s, hide 1.5s 8s forwards;
 
         overflow: hidden;
     }a:hover{
