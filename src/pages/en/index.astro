@@ -10,7 +10,7 @@ import Grid from '../../components/Grid.astro';
 import Hero from '../../components/Hero.astro';
 import Icon from '../../components/Icon.astro';
 import PortfolioPreview from '../../components/PortfolioPreview.astro';
-import TechGrid from "../../components/TechGrid.astro";
+import TechGrid from "../../components/TechGrid"
 
 // Page section components
 import ContactCTA from '../../components/ContactCTA.astro';
@@ -82,7 +82,7 @@ const projects = (await getCollection('work'))
 			<div>
 				<header class="techHead stack gap-2 lg:gap-4">
 					<h3>Technologies used</h3>
-					<TechGrid/>
+					<TechGrid client:load/>
 				</header>
 			</div>
 			
@@ -205,7 +205,10 @@ const projects = (await getCollection('work'))
 
 	.techHead{
 		text-align: center;
+	}.techHead h3{
+		margin-bottom: 2rem;
 	}
+	
 
 	.section-header h3 {
 		font-size: var(--text-2xl);

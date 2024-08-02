@@ -14,11 +14,13 @@
   "dependencies": {
     "@astrojs/mdx": "^3.1.3",
     "@astrojs/partytown": "^2.1.1",
+    "@astrojs/react": "^3.6.1",
     "@astrojs/sitemap": "^3.1.6",
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@vercel/analytics": "^1.3.1",
     "astro": "^4.12.2",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "swiper": "^11.1.9"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
