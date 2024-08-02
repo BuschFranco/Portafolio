@@ -42,21 +42,21 @@ export default function MySwiper() {
     pagination={{ clickable: true }}
     style={swiperStyles.container}
     >
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/js.jpg" alt="imagen de JavaScripts" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/d365.jpg" alt="imagen de Dynamics 365" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/astro.jpg" alt="imagen de Astro" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/wordpress.jpg" alt="imagen de WordPress" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/git.jpg" alt="imagen de Git" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/c4.jpg" alt="imagen de C#" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/php.jpg" alt="imagen de php" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/sql.jpg" alt="imagen de SQL" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/tailwind.jpg" alt="imagen de tailwind css" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/unity.jpg" alt="imagen de Unity" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/react.jpg" alt="imagen de React" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/bos5.jpg" alt="imagen de Bootstrap 5" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/x++.jpg" alt="imagen de X++" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/node.jpg" alt="imagen de node" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/py.jpg" alt="imagen de python" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/js.webp" alt="imagen de JavaScripts" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/dynamics.webp" alt="imagen de Dynamics 365" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/astro.webp" alt="imagen de Astro" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/wordpress.webp" alt="imagen de WordPress" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/git.webp" alt="imagen de Git" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/c.webp" alt="imagen de C#" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/php.webp" alt="imagen de php" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/sql.webp" alt="imagen de SQL" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/tailwind.webp" alt="imagen de tailwind css" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/unity.webp" alt="imagen de Unity" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/react.webp" alt="imagen de React" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/bos.webp" alt="imagen de Bootstrap 5" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/x.webp" alt="imagen de X++" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/node.webp" alt="imagen de node" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/py.webp" alt="imagen de python" /></SwiperSlide>
  
     </Swiper>
   );
