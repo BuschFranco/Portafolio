@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 const swiperStyles = {
   container: {
     width: '100%', // Ancho del contenedor
-    height: '13rem', // Altura del contenedor
+    height: '12.5rem', // Altura del contenedor
 
     padding: "1rem",
 
@@ -28,7 +28,9 @@ const swiperStyles = {
   },
   image: {
     width: "100%",
-    borderRadius: "0.5rem"
+    borderRadius: "0.5rem",
+
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5)',
   }
 };
 
@@ -38,8 +40,26 @@ export default function MySwiper() {
     spaceBetween={16}
     slidesPerView={5}
     loop
-    onAutoplay={2000}
+    autoplay
     pagination={{ clickable: true }}
+    breakpoints={{
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 3,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 4,
+      },
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 5,
+      },
+    }}
     style={swiperStyles.container}
     >
       <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/js.webp" alt="imagen de JavaScripts" /></SwiperSlide>
