@@ -18,7 +18,7 @@ const swiperStyles = {
     borderBottom: "2px solid rgba(255, 255, 255, 0.155)",
     borderRadius: "1rem",
 
-    cursor: "pointer",
+    cursor: "grab",
 
 
   },
