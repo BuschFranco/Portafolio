@@ -29,6 +29,8 @@ export const languages = {
 
       "notification.title":"¿Buscas una página web para tu proyecto o negocio?",
       "notification.description":"Click para más información",
+
+      "contactButtom.title":"Contáctame",
     },
     en: {
       'nav.home': 'Home',
@@ -52,5 +54,7 @@ export const languages = {
 
       "notification.title":"Do you want a web page for your project or business?",
       "notification.description":"Click for more information",
+
+      "contactButtom.title":"Contact me",
     },
   } as const;

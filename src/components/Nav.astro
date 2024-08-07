@@ -367,9 +367,18 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			gap: 0;
 		}
 	}
+
 	@media (forced-colors: active) {
 		.link.active {
 			color: SelectedItem;
 		}
 	}
+
+	@media (max-width: 768px) {
+		nav {
+			backdrop-filter: blur(10px);
+			padding: 0.2rem;
+		}
+	}
 </style>
+

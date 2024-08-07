@@ -1,0 +1,68 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="contact-button">
+   <a href="#conteinerContact">
+        <h5>{t("contactButtom.title")}</h5>
+   </a>
+</div>
+
+<style>
+    .contact-button {
+        display: flex;
+        position: fixed;
+        bottom: 1rem;
+        z-index: 99;
+        opacity: 0;
+
+        animation: show2 1.5s 2s forwards;
+
+        transition: 0.5s;
+    }.contact-button:hover{
+        a:hover{
+            box-shadow: 5px 5px 0px rgb(255, 255, 255);
+            transform: translate(-5px, -5px);
+    }
+    }
+
+    a {
+        background-image: linear-gradient(0deg,#7611a6,#c561f6);
+        border-radius: 1rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.479);
+        text-decoration: none;
+        padding: 0.5rem;
+
+        transition: 0.3s;
+    }
+
+    h5 {
+        color: white;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
+    }
+
+    @media (max-width: 600px) {
+        .contact-button {
+            top: 0; /* Posicionar en la parte superior */
+            bottom: auto; /* Eliminar el posicionamiento inferior */
+            right: 0; /* Centrar horizontalmente */
+            left: 0; /* Centrar horizontalmente */
+            justify-content: center; /* Centrar el contenido */
+            padding-top: 1rem; /* Añadir un poco de margen superior */
+        }
+    }
+
+    @keyframes show2 {
+    from {
+      opacity: 0;
+      right: -40%; 
+    }
+    to {
+      opacity: 1;
+      right: 1rem;
+    }
+  }
+</style>
