@@ -25,14 +25,14 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	{ label: 'GitHub', href: 'https://github.com/BuschFranco', icon: 'github-logo' },
 ];
 
-
+const brand = "{buschfranco.com}"
 ---
 
 <nav>
 	<div class="menu-header">
 		<a href={getRelativeLocaleUrl(currentLocale ?? "","")} class="site-title">
-			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
-			Franco Busch
+			<img class="iconimg" src="/logo.webp" alt="">
+			{brand}
 		</a>
 		<LanguagePicker />
 		<menu-button>
@@ -162,6 +162,11 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 </script>
 
 <style>
+
+	.iconimg{
+		width: 2rem;
+	}
+
 	nav {
 		z-index: 9999;
 		position: relative;
