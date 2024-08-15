@@ -25,14 +25,15 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	{ label: 'GitHub', href: 'https://github.com/BuschFranco', icon: 'github-logo' },
 ];
 
-const brand = "{buschfranco.com}"
+const brand2 = "}"
+const brand = "{"
 ---
 
 <nav>
 	<div class="menu-header">
 		<a href={getRelativeLocaleUrl(currentLocale ?? "","")} class="site-title">
 			<img class="iconimg" src="/logo.webp" alt="">
-			{brand}
+			<p><span class="pink">{brand}</span>buschfranco.com<span class="pink">{brand2}</span></p>
 		</a>
 		<LanguagePicker />
 		<menu-button>
@@ -162,6 +163,10 @@ const brand = "{buschfranco.com}"
 </script>
 
 <style>
+
+	.pink{
+		color: #c561f6;
+	}
 
 	.iconimg{
 		width: 2rem;
@@ -382,7 +387,14 @@ const brand = "{buschfranco.com}"
 	@media (max-width: 768px) {
 		nav {
 			backdrop-filter: blur(10px);
-			padding: 0.2rem;
+			padding-top: 0.2rem;
+			padding-bottom: 0.2rem;
+		}
+	}
+	@media (max-width: 440px) {
+		.site-title{
+			display: block;
+			text-align: center;
 		}
 	}
 </style>
