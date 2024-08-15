@@ -9,16 +9,19 @@ interface Props {
 const {currentLocale} = Astro;
 
 let titleEn;
+let descriptionEn;
 
 if(currentLocale == "en"){
-	titleEn = "Software Developer";
+	titleEn = "Web & Software Developer";
+	descriptionEn = "Web and Software Developer, specialized in creating websites and applications for businesses and SMEs. Through my web development agency, I offer a portfolio of customized solutions that include everything from website design and development to mobile app programming. With experience in technologies like PHP, JavaScript, and Dynamics 365, I provide comprehensive services as a full stack developer. If you're looking to buy a website or create a custom solution for your business, I'm here to help."
 } else{
-	titleEn = "Desarrollador de Software";
+	titleEn = "Desarrollos Web y de Software";
+	descriptionEn = "Desarrollador Web y de Software, especializado en la creación de páginas web y aplicaciones para empresas y pymes. A través de mi agencia de desarrollo web, ofrezco un portafolio de soluciones personalizadas que incluyen desde el diseño y desarrollo de sitios web hasta la programación de aplicaciones móviles. Con experiencia en tecnologías como PHP, JavaScript y Dynamics 365, brindo servicios completos como desarrollador full stack. Si buscas comprar una página web o crear una solución a medida para tu negocio, estoy aquí para ayudarte."
 }
 
 let {
 	title = 'Busch Franco | ' + titleEn,
-	description = 'Franco Busch, desarrollador web y de software en Buenos Aires. Portafolio de proyectos para empresas y pymes, utilizando tecnologías como PHP, JavaScript y Dynamics 365. Soluciones a medida para tu negocio.',
+	description = descriptionEn,
 } = Astro.props;
 ---
 
