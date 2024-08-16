@@ -178,6 +178,7 @@ const brand = "{"
 		font-family: var(--font-brand);
 		font-weight: 500;
 		margin-bottom: 3.5rem;
+		
 	}
 
 	.menu-header {
@@ -295,12 +296,15 @@ const brand = "{"
 		height: calc(var(--icon-size) + 2 * var(--icon-padding));
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 800px) {
 		nav {
 			display: grid;
 			grid-template-columns: 1fr auto 1fr;
 			align-items: center;
-			padding: 2.5rem 5rem;
+			padding-top: 2.5rem;
+			padding-bottom: 2.5rem;
+			padding-left: 0.3rem;
+			padding-right: 5rem;
 			gap: 1rem;
 		}
 
@@ -370,11 +374,13 @@ const brand = "{"
 		}
 	}
 
-	@media (min-width: 60em) {
+	@media (min-width: 1040px) {
 		.socials {
 			display: flex;
 			justify-content: flex-end;
 			gap: 0;
+		} nav{
+			padding-left: 2.5rem;
 		}
 	}
 
@@ -389,6 +395,7 @@ const brand = "{"
 			backdrop-filter: blur(10px);
 			padding-top: 0.2rem;
 			padding-bottom: 0.2rem;
+			padding-left: 0;
 		}
 	}
 	@media (max-width: 440px) {
