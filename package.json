@@ -3,7 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "concurrently \"npm run dev:astro\" \"npm run dev:server\"",
+    "dev:astro": "astro dev",
+    "dev:server": "node server.js",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -18,9 +20,13 @@
     "@astrojs/sitemap": "^3.1.6",
     "@fortawesome/fontawesome-free": "^6.5.2",
     "astro": "^4.13.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0",
     "swiper": "^11.1.9"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "gh-pages": "^6.1.1"
   }
 }
