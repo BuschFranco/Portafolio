@@ -18,6 +18,7 @@ import ContactButtom from '../components/contactButtom.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
 import Notification from '../components/notification.astro';
+import PruebaBackend from '../components/PruebaBackend.astro';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
@@ -54,7 +55,7 @@ const projects = (await getCollection('work'))
 					src="assets/portrait.webp"
 				/>
 			</header>
-
+			<!--<PruebaBackend />-->
 			<Skills />
 		</div>
 
