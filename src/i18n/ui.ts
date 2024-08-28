@@ -9,7 +9,7 @@ export const languages = {
   export const ui = {
     es: {
       'nav.home': 'Inicio',
-      'nav.work': 'Trabajo',
+      'nav.work': 'Trabajos',
       'nav.about': 'Sobre Mí',
       'nav.benefit': 'Beneficios',
 
