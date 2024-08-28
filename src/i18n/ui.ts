@@ -31,6 +31,8 @@ export const languages = {
       "notification.description":"Click para más información",
 
       "contactButtom.title":"Contáctame",
+
+      "asistance.title":"Asistencia Online",
     },
     en: {
       'nav.home': 'Home',
@@ -56,5 +58,7 @@ export const languages = {
       "notification.description":"Click for more information",
 
       "contactButtom.title":"Contact me",
+
+      "asistance.title":"Online Assistance",
     },
   } as const;

@@ -17,6 +17,7 @@ import ContactButtom from '../../components/contactButtom.astro';
 import ContactCTA from '../../components/ContactCTA.astro';
 import Skills from '../../components/Skills.astro';
 import Notification from '../../components/notification.astro';
+import ChatBot from '../../components/ChatBot.astro';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
@@ -25,6 +26,8 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
+
+	<ChatBot/>
 
 	<ContactButtom />
 

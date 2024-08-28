@@ -1,5 +1,12 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <div id="chat-container">
-    <h5 id="toggle-chat">Asistencia Online</h5>
+    <h5 id="toggle-chat">{t("asistance.title")}</h5>
     <iframe
         src="https://www.chatbase.co/chatbot-iframe/415G7YDoQsSLz2aURCaX-"
         frameborder="0"
