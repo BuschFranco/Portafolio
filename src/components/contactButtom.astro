@@ -16,10 +16,11 @@ const t = useTranslations(lang);
         display: flex;
         position: fixed;
         bottom: 1rem;
+        left: 1rem;
         z-index: 99;
         opacity: 0;
 
-        animation: show2 1.5s 4s forwards;
+        animation: show2 1.5s 10s forwards;
 
         transition: 0.5s;
     }.contact-button:hover{
@@ -54,17 +55,19 @@ const t = useTranslations(lang);
             left: 0; /* Centrar horizontalmente */
             justify-content: center; /* Centrar el contenido */
             padding-top: 1rem; /* Añadir un poco de margen superior */
+        }h5{
+            font-size: 1.3rem;
         }
     }
 
     @keyframes show2 {
     from {
       opacity: 0;
-      right: -40%; 
+      left: -40%; 
     }
     to {
       opacity: 1;
-      right: 1rem;
+      left: 1rem;
     }
   }
 </style>

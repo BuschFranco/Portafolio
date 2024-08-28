@@ -15,7 +15,9 @@ const {currentLocale} = Astro;
 const textLinks: { label: string; href: string }[] = [
 	{ label: t("nav.home"), href: getRelativeLocaleUrl(currentLocale ?? "","") },
 	{ label: t("nav.work"), href: getRelativeLocaleUrl(currentLocale ?? "","work") },
+	{ label: t("nav.benefit"), href: getRelativeLocaleUrl(currentLocale ?? "","benefits") },
 	{ label: t("nav.about"), href: getRelativeLocaleUrl(currentLocale ?? "","about") }
+	
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */

@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+
+---
+
+<BaseLayout title="Curriculum Online | Busch Franco" description="Descarga el currículum de Franco Busch, un desarrollador web y de software en Buenos Aires con amplia experiencia en el diseño y desarrollo de páginas web, aplicaciones móviles, y soluciones empresariales a medida. Con conocimientos en tecnologías como PHP, JavaScript y Dynamics 365, Franco ofrece servicios completos como desarrollador full stack. Descubre cómo su trayectoria y habilidades pueden contribuir al éxito de tu próximo proyecto.">
+	<Hero title="Curriculum Online" tagline="Explora mi trayectoria y habilidades técnicas" />
+
+    <iframe id="cv" src="/assets/BuschFrancoCV.pdf">
+        Este navegador no soporta la visualización de PDF.
+
+    </iframe>
+    <a download="CV-BuschFranco" href="/assets/BuschFrancoCV.pdf"><span class="but">Descargar Curriculum</span></a>
+</BaseLayout>
