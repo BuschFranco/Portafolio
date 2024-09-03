@@ -53,12 +53,13 @@ const t = useTranslations(lang);
 <script>
     const toggleChat = document.getElementById('toggle-chat');
     const chatContainer = document.getElementById('chat-container');
-    let isOpen = false;
+    let isOpen;
 
     toggleChat.addEventListener('click', function() {
         if (isOpen) {
             chatContainer.style.bottom = '-36.3rem'; // Ocultar chat
-        } else {
+            
+        } else{
             chatContainer.style.bottom = '1.3rem'; // Mostrar chat
         }
         isOpen = !isOpen;
