@@ -4,13 +4,13 @@ import partytown from "@astrojs/partytown";
 import react from '@astrojs/react';
 import mdx from "@astrojs/mdx";
 
-import db from "@astrojs/db";
+//import db from "@astrojs/db"; db()
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
+  //output: "server",
   site: 'https://www.buschfranco.com',
-  integrations: [sitemap(), react(), partytown(), mdx(), db()],
+  integrations: [sitemap(), react(), partytown(), mdx()],
 
   i18n: {
     defaultLocale: "es",
