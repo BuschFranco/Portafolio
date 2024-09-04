@@ -1,5 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import { db, user } from 'astro:db';
+const users = await db.select().from(user);
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -45,6 +47,12 @@ const projects = (await getCollection('work'))
 					<div class="roles">
 						<a href="#conteinerContact"><span class="but">Contáctame</span></a>
 						<a href="/curriculum"><span class="but">Ver Curriculum Online</span></a>
+						<!--<div>
+							<h1>Usuarios:</h1>
+							<ul>
+								{users.map((user) => <li>{user.userName}</li>)}
+							</ul>
+						</div> -->
 						
 						
 					</div>

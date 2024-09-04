@@ -1,5 +1,17 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { db, user } from 'astro:db';
+
+/*if(Astro.request.method === "POST"){
+    const formData = await Astro.request.formData();
+    const userName = formData.get('userName');
+    const email = formData.get('email');
+    const phonenumber = formData.get('phonenumber');
+    const id = 2;
+
+    console.log({userName, email, phonenumber});
+
+}*/
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -30,7 +42,7 @@ const t = useTranslations(lang);
         method="POST">
             <div>
               <label for="nombre">{t("contact.na")}</label>
-              <input name="name" placeholder="Ej: Jonathan" required>
+              <input type="text" name="userName" placeholder="Ej: Jonathan" required>
             </div>
             <div>
               <label for="email">Email</label>
@@ -38,7 +50,7 @@ const t = useTranslations(lang);
             </div>
             <div>
               <label for="tel">{t("contact.tel")}</label>
-              <input type="tel" name="telefono" placeholder="Ej: (+54) 1131506458">
+              <input type="tel" name="phonenumber" placeholder="Ej: (+54) 1131506458">
             </div>
             <div >
               <label for="mensaje">{t("contact.des")}</label>
