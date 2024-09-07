@@ -36,7 +36,6 @@ const brand = "{"
 			<img class="iconimg" src="/logo.webp" alt="">
 			<p><span class="pink">{brand}</span>buschfranco.com<span class="pink">{brand2}</span></p>
 		</a>
-		<LanguagePicker />
 		<menu-button>
 			<template>
 				<button class="menu-button" aria-expanded="false">
@@ -106,6 +105,7 @@ const brand = "{"
 					</li>
 				))
 			}
+			<LanguagePicker />
 		</ul>
 		<div class="menu-footer">
 			<div class="socials">
@@ -196,6 +196,7 @@ const brand = "{"
 		line-height: 1.1;
 		color: var(--gray-0);
 		text-decoration: none;
+		margin: 0rem 2rem 0rem 0rem;
 	}
 
 	.menu-button {
@@ -246,6 +247,8 @@ const brand = "{"
 		padding: 2rem;
 		background-color: var(--gray-999);
 		border-bottom: 1px solid var(--gray-800);
+
+		align-items: center;
 	}
 
 	.link {

@@ -30,7 +30,7 @@ export const languages = {
       "notification.title":"¿Buscas una página web para tu proyecto o negocio?",
       "notification.description":"Click para más información",
 
-      "contactButtom.title":"Contáctame",
+      "contactButtom.title":"Agendemos un Meet",
 
       "asistance.title":"Asistencia Online",
     },
@@ -57,7 +57,7 @@ export const languages = {
       "notification.title":"Do you want a web page for your project or business?",
       "notification.description":"Click for more information",
 
-      "contactButtom.title":"Contact me",
+      "contactButtom.title":"Let's schedule a meeting",
 
       "asistance.title":"Online Assistance",
     },

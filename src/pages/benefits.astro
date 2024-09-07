@@ -2,46 +2,18 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import ChatBot from '../components/ChatBot.astro';
+import BenefitsList from "../components/benefitsList.astro";
 ---
 
 <BaseLayout title="Curriculum Online | Busch Franco" description="Descarga el currículum de Franco Busch, un desarrollador web y de software en Buenos Aires con amplia experiencia en el diseño y desarrollo de páginas web, aplicaciones móviles, y soluciones empresariales a medida. Con conocimientos en tecnologías como PHP, JavaScript y Dynamics 365, Franco ofrece servicios completos como desarrollador full stack. Descubre cómo su trayectoria y habilidades pueden contribuir al éxito de tu próximo proyecto.">
 	<Hero title="Beneficios" tagline="Explora los beneficios que obtendras al contratar mis servicios como desarrollador." />
     
-    <div id="benefit-conteiner">
-        <section>
-            <div>
-                <h2>hola</h2>
-            </div>
-            <div class="imagen">
-                <img src="/assets/benefits/serp-en.png" alt="">
-            </div>
-        </section>
-        <section>
-            <div>
-                <h2>hola</h2>
-            </div>
-            <div class="imagen">
-                <img src="/assets/benefits/serp-en.png" alt="">
-            </div>
-        </section>
-       
-    </div>
+       <BenefitsList/>
     
 </BaseLayout>
 <ChatBot/>
 
 
 <style>
-    #benefit-conteiner{
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;   
-    }.imagen{
-        
-    }
-    img{
-        border-radius: 0.8rem;
-    }
+    
 </style>

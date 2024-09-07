@@ -1,8 +1,8 @@
 ---
 import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Pill from '../components/Pill.astro';
 import ChatBot from '../components/ChatBot.astro';
+import TechGrid from '../components/TechGrid.jsx';
 ---
 
 <BaseLayout title="Curriculum Online | Busch Franco" description="Descarga el currículum de Franco Busch, un desarrollador web y de software en Buenos Aires con amplia experiencia en el diseño y desarrollo de páginas web, aplicaciones móviles, y soluciones empresariales a medida. Con conocimientos en tecnologías como PHP, JavaScript y Dynamics 365, Franco ofrece servicios completos como desarrollador full stack. Descubre cómo su trayectoria y habilidades pueden contribuir al éxito de tu próximo proyecto.">
@@ -12,7 +12,12 @@ import ChatBot from '../components/ChatBot.astro';
         Este navegador no soporta la visualización de PDF.
 
     </iframe>
-    <a download="CV-BuschFranco" href="/assets/BuschFrancoCV.pdf"><span class="but">Descargar Curriculum</span></a>
+    <a download="CV-BuschFranco" href="/assets/BuschFrancoCV.pdf"><span class="but">Descargar Curriculum <i class="fi fi-br-download"></i></span> </a>
+
+    <div class="techHead">
+        <h3>Tecnologías utilizadas</h3>
+        <TechGrid client:load/>
+    </div>
 </BaseLayout>
 
 <style>     
@@ -23,6 +28,7 @@ import ChatBot from '../components/ChatBot.astro';
             max-width: 700px;
             height: 80vh;
             border: none;
+            margin-top: 2rem;
         }
 
         @media (min-width: 768px) {
@@ -64,4 +70,15 @@ import ChatBot from '../components/ChatBot.astro';
         transform: translate(5px, -5px);
 	}
     
+    .techHead{
+		
+		text-align: center;
+        margin: auto;
+
+        width: 80vw;
+	}.techHead h3{
+        margin-top: 3rem;
+		margin-bottom: 2rem;
+	}
+
 </style>

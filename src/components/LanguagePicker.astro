@@ -6,41 +6,73 @@ const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 ---
 <div class="lng">
-  {Object.entries(languages).map(([lang, label]) => (
-    <div class="btn">
-      <a href={translatePath('/', lang)}>{label}</a>
-    </div>
-      
-  ))}
+  <h5><i class="fi fi-bs-world"></i></h5>
+  <ul>
+    {Object.entries(languages).map(([lang, label]) => (
+      <li class="btn">
+        <a href={translatePath('/', lang)}>|{label}</a>
+      </li>
+    ))}
+  </ul>
 </div>
 
 <style>
-
-
-  .lng{
+  .lng {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1.3rem;
-  }@media (min-width: 800px) {
-		.lng{
-    margin-left: 3rem ;
+    background-color: var(--accent-regular);
+    border-radius: 2rem;
+    padding: 0.3rem 1rem;
   }
-	}
 
-  a{
+  h5 {
+    color: white;
+    text-shadow: 0px 0px 7px black;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  li {
+    margin: 0.5rem 0;
+  }
+
+  a {
     text-decoration: none;
     color: white;
     text-shadow: 0px 0px 7px black;
-
     transition: 0.2s;
-  }a:hover{
-    text-shadow: 0px 0px 15px #ae00ff;
-
-    background-color: #ae00ff52;
-    border-radius: 0.8rem;
-    margin: 0.5rem;
+    display: block;
     padding: 0.5rem;
+    border-radius: 0.8rem;
   }
 
+  a:hover {
+    text-shadow: 0px 0px 15px #ae00ff;
+    background-color: #ae00ff52;
 
+    margin: 0rem 0.3rem 0rem 0.3rem;
+  }
+
+  @media (min-width: 800px) {
+    .lng {
+      flex-direction: row;
+    }
+    
+    ul {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+    }
+
+    li {
+      margin: 0;
+    }
+  }
 </style>

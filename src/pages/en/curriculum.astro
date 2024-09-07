@@ -1,8 +1,8 @@
 ---
 import Hero from '../../components/Hero.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Pill from '../../components/Pill.astro';
 import ChatBot from '../../components/ChatBot.astro';
+import TechGrid from '../../components/TechGrid.jsx';
 ---
 
 <BaseLayout title="Resume Online | Busch Franco" description="Download the resume of Franco Busch, a web and software developer from Buenos Aires with extensive experience in designing and developing websites, mobile applications, and custom business solutions. With expertise in technologies like PHP, JavaScript, and Dynamics 365, Franco offers comprehensive services as a full stack developer. Discover how his background and skills can contribute to the success of your next project.">
@@ -12,7 +12,12 @@ import ChatBot from '../../components/ChatBot.astro';
         This browser does not support PDF viewing.
 
     </iframe>
-    <a download="CV-BuschFranco" href="/assets/BuschFrancoCV.pdf"><span class="but">Download Resume</span></a>
+    <a download="CV-BuschFranco" href="/assets/BuschFrancoCV.pdf"><span class="but">Download Resume <i class="fi fi-br-download"></i></span></a>
+
+    <div class="techHead">
+        <h3>Technologies used</h3>
+        <TechGrid client:load/>
+    </div>
     
 </BaseLayout>
 
@@ -24,6 +29,7 @@ import ChatBot from '../../components/ChatBot.astro';
             max-width: 700px;
             height: 80vh;
             border: none;
+            margin-top: 2rem;
         }
 
         @media (min-width: 768px) {
@@ -63,6 +69,17 @@ import ChatBot from '../../components/ChatBot.astro';
 	}.but:hover{
 		box-shadow: -5px 5px 0px rgb(255, 255, 255);
         transform: translate(5px, -5px);
+	}
+
+    .techHead{
+		
+		text-align: center;
+        margin: auto;
+
+        width: 80vw;
+	}.techHead h3{
+        margin-top: 3rem;
+		margin-bottom: 2rem;
 	}
     
 </style>
