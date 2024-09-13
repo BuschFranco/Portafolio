@@ -14,10 +14,27 @@ import TechGrid from '../components/TechGrid.jsx';
     </iframe>
     <a download="CV-BuschFranco" href="/assets/BuschFrancoCV.pdf"><span class="but">Descargar Curriculum <i class="fi fi-br-download"></i></span> </a>
 
+    <section id="section-me">
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="content">
+            <p>
+                Me llamo Franco Busch, originario de Buenos Aires, Argentina. Mi enfoque profesional se centra en el desarrollo web, la programación y las nuevas tecnologías.
+                Desde mi infancia, he tenido una afinidad con la informática, reconociéndola como una puerta esencial hacia el ámbito laboral y el desarrollo global.
+            </p>
+            <p>
+                <br>
+                Trabajé como desarrollador de software, donde participé en la creación de una aplicación ERP de gestión financiera usando Microsoft Dynamics 365, con lenguajes como X++ y C# entre otros. Formé parte de un equipo de desarrollo donde además, colaboramos estrechamente con un equipo de testing en Brasil, que era parte del cliente. Trabajamos utilizando metodologías waterfall, siguiendo un proceso lineal y estructurado para completar cada fase del proyecto antes de avanzar a la siguiente.
+    
+    Antes de desarrollar el ERP, trabajé como freelance realizando desarrollos web para algunas pymes. En estos proyectos, utilicé lenguajes y tecnologías como JavaScript, PHP y frameworks como Bootstrap y React, creando soluciones personalizadas y funcionales.
+            </p>
+        </div>
+    </section>
+
     <div class="techHead">
         <h3>Tecnologías utilizadas</h3>
         <TechGrid client:load/>
     </div>
+
 </BaseLayout>
 
 <style>     
@@ -81,4 +98,13 @@ import TechGrid from '../components/TechGrid.jsx';
 		margin-bottom: 2rem;
 	}
 
+
+    #section-me{
+        width: 80%;
+        margin: auto;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }.section-title{
+        padding-bottom: 2rem;
+    }
 </style>
