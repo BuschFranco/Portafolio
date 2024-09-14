@@ -33,6 +33,8 @@ export const languages = {
       "contactButtom.title":"Agendemos un Meet",
 
       "asistance.title":"Asistencia Online",
+
+      'certificates.title': 'Certificados Profesionales',
     },
     en: {
       'nav.home': 'Home',
@@ -60,5 +62,7 @@ export const languages = {
       "contactButtom.title":"Let's schedule a meeting",
 
       "asistance.title":"Online Assistance",
+
+      'certificates.title': 'Professional Certificates',
     },
   } as const;

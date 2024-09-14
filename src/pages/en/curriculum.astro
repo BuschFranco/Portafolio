@@ -3,6 +3,12 @@ import Hero from '../../components/Hero.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ChatBot from '../../components/ChatBot.astro';
 import TechGrid from '../../components/TechGrid.jsx';
+import Certificados from '../../components/Certificados.jsx';
+
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <BaseLayout title="Resume Online | Busch Franco" description="Download the resume of Franco Busch, a web and software developer from Buenos Aires with extensive experience in designing and developing websites, mobile applications, and custom business solutions. With expertise in technologies like PHP, JavaScript, and Dynamics 365, Franco offers comprehensive services as a full stack developer. Discover how his background and skills can contribute to the success of your next project.">
@@ -31,6 +37,11 @@ Before developing the ERP, I worked as a freelance web developer for several sma
         </div>
     </section>
 
+    <div>
+        <h3 class="certificate-title">{t("certificates.title")}</h3>
+        <Certificados client:load/>
+    </div>
+
     <div class="techHead">
         <h3>Technologies used</h3>
         <TechGrid client:load/>
@@ -38,7 +49,12 @@ Before developing the ERP, I worked as a freelance web developer for several sma
     
 </BaseLayout>
 
-<style>     
+<style>    
+
+.certificate-title{
+        text-align: center;
+        margin-top: 2rem;
+    }
     #cv {
             display: block;
             margin: auto;

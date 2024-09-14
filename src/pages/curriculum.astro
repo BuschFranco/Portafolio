@@ -3,6 +3,13 @@ import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ChatBot from '../components/ChatBot.astro';
 import TechGrid from '../components/TechGrid.jsx';
+import Certificados from '../components/Certificados.jsx';
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 ---
 
 <BaseLayout title="Curriculum Online | Busch Franco" description="Descarga el currículum de Franco Busch, un desarrollador web y de software en Buenos Aires con amplia experiencia en el diseño y desarrollo de páginas web, aplicaciones móviles, y soluciones empresariales a medida. Con conocimientos en tecnologías como PHP, JavaScript y Dynamics 365, Franco ofrece servicios completos como desarrollador full stack. Descubre cómo su trayectoria y habilidades pueden contribuir al éxito de tu próximo proyecto.">
@@ -30,6 +37,12 @@ import TechGrid from '../components/TechGrid.jsx';
         </div>
     </section>
 
+    <div>
+        <h3 class="certificate-title">{t("certificates.title")}</h3>
+        <Certificados client:load/>
+    </div>
+    
+
     <div class="techHead">
         <h3>Tecnologías utilizadas</h3>
         <TechGrid client:load/>
@@ -37,7 +50,12 @@ import TechGrid from '../components/TechGrid.jsx';
 
 </BaseLayout>
 
-<style>     
+<style> 
+
+    .certificate-title{
+        text-align: center;
+        margin-top: 2rem;
+    }
     #cv {
             display: block;
             margin: auto;
