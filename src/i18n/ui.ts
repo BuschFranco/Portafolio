@@ -10,7 +10,7 @@ export const languages = {
     es: {
       'nav.home': 'Inicio',
       'nav.work': 'Trabajos',
-      'nav.about': 'Sobre Mí',
+      'nav.about': 'Conóceme',
       'nav.benefit': 'Beneficios',
 
       "skill.fs":"Creación de aplicaciones web y móviles. Manejo tanto el frontend como el backend, asegurando soluciones integrales, eficientes y escalables.",
@@ -36,8 +36,8 @@ export const languages = {
     },
     en: {
       'nav.home': 'Home',
-      'nav.work': 'Work',
-      'nav.about': 'About Me',
+      'nav.work': 'Works',
+      'nav.about': 'Get to know me',
       'nav.benefit': 'Benefits',
 
       "skill.fs":"Creation of web and mobile applications. I handle both the frontend and backend, ensuring comprehensive, efficient, and scalable solutions.",

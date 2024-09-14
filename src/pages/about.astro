@@ -6,7 +6,7 @@ import Hero from '../components/Hero.astro';
 import ChatBot from '../components/ChatBot.astro';
 ---
 
-<BaseLayout title="Sobre Mí | Busch Franco" description="Descubre a Franco Busch, un desarrollador web y de software en Buenos Aires, especializado en el desarrollo de páginas web y aplicaciones para empresas y pymes. A través de mi agencia de desarrollo web, ofrezco soluciones personalizadas utilizando tecnologías como Dynamics 365, PHP y JavaScript. Con una sólida trayectoria como desarrollador full stack, mi pasión por el diseño y la creación de sitios web me permite brindar servicios completos para quienes buscan comprar una página web o desarrollar aplicaciones a medida.">
+<BaseLayout title="Conóceme | Busch Franco" description="Descubre a Franco Busch, un desarrollador web y de software en Buenos Aires, especializado en el desarrollo de páginas web y aplicaciones para empresas y pymes. A través de mi agencia de desarrollo web, ofrezco soluciones personalizadas utilizando tecnologías como Dynamics 365, PHP y JavaScript. Con una sólida trayectoria como desarrollador full stack, mi pasión por el diseño y la creación de sitios web me permite brindar servicios completos para quienes buscan comprar una página web o desarrollar aplicaciones a medida.">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
@@ -22,24 +22,29 @@ import ChatBot from '../components/ChatBot.astro';
 			</Hero>
 			<ChatBot/>
 			<section>
-				<h2 class="section-title">Experiencia</h2>
+				<h5 class="section-title">Qué es lo que hacemos?</h5>
 				<div class="content">
 					<p>
-						En buschfranco.com, nos especializamos en el desarrollo de sitios web para pymes y estudiantes que buscan presentar sus proyectos de manera moderna y atractiva. En nuestros desarrollos aplicamos  las mejores prácticas de marketing digital con un enfoque en preservar la identidad y voz única de cada marca o proyecto, garantizando autenticidad y resultados concretos.
+						En <a href="/">buschfranco.com</a>, nos especializamos en el desarrollo de sitios web para pymes y estudiantes que buscan presentar sus proyectos de manera moderna y atractiva. En nuestros desarrollos aplicamos las mejores prácticas de marketing digital con un enfoque en preservar la identidad y voz única de cada marca o proyecto, garantizando autenticidad y resultados concretos.
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Habilidades</h2>
+				<h5 class="section-title">Para quienes lo hacemos?</h5>
 				<div class="content">
-					<ul>
-						<li>Actitud Resolutiva</li>
-						<li>Metodologías Ágiles y Waterfall</li>
-						<li>Creativo</li>
-						<li>Buen manejo del Inglés</li>
-						<li>Detallista</li>
-						<li>Rápida Adaptación</li>
-					</ul>
+					<p>nuestra misión es ofrecer soluciones personalizadas que se ajusten a las necesidades específicas de pequeñas y medianas empresas (o pymes) y estudiantes que desean destacar en un mundo digital cada vez más competitivo.</p>
+				</div>
+			</section>
+			<section>
+				<h5 class="section-title">Para las pymes</h5>
+				<div class="content">
+					<p>Sabemos que las pymes enfrentan el desafío de competir con grandes corporaciones mientras mantienen su esencia y conexión con sus clientes. Por eso, nos enfocamos en crear sitios web que reflejen la autenticidad y valores de cada empresa, ayudándoles a fortalecer su presencia en línea sin perder su identidad. Nuestros desarrollos están diseñados para mejorar la visibilidad de tu negocio, atraer a tu público objetivo y aumentar tus ventas, siempre respetando los recursos y el tamaño de cada empresa. Integramos estrategias de marketing digital y diseños personalizados, asegurando que tu sitio web no solo sea funcional y moderno, sino también una extensión de la personalidad de tu marca.</p>
+				</div>
+			</section>
+			<section>
+				<h5 class="section-title">Para los estudiantes</h5>
+				<div class="content">
+					<p>Entendemos que los estudiantes necesitan plataformas que les permitan exponer sus proyectos de manera profesional y atractiva, ya sea para obtener una mejor calificación, presentarse ante posibles empleadores, como parte de un trabajo o compartir sus ideas con el mundo. Nos especializamos en brindarles un espacio que transmita su creatividad y esfuerzo, mientras incorporamos las mejores prácticas de diseño y funcionalidad. Así, tus proyectos no solo estarán bien presentados, sino que serán una representación única de tu trabajo e ideas, ayudándote a destacar en el ámbito académico y profesional.</p>
 				</div>
 			</section>
 		</main>
@@ -70,7 +75,6 @@ import ChatBot from '../components/ChatBot.astro';
 
 	.section-title {
 		grid-column-start: 1;
-		font-size: var(--text-xl);
 		color: var(--gray-0);
 	}
 
