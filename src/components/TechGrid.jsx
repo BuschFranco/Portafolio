@@ -65,7 +65,7 @@ export default function MySwiper() {
     }}
     style={swiperStyles.container}
     >
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/js.webp" alt="imagen de JavaScripts" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/Javascript.webp" alt="imagen de JavaScripts" /></SwiperSlide>
       <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/dynamics.webp" alt="imagen de Dynamics 365" /></SwiperSlide>
       <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/astro.webp" alt="imagen de Astro" /></SwiperSlide>
       <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/wordpress.webp" alt="imagen de WordPress" /></SwiperSlide>
@@ -79,7 +79,7 @@ export default function MySwiper() {
       <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/bos.webp" alt="imagen de Bootstrap 5" /></SwiperSlide>
       <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/x.webp" alt="imagen de X++" /></SwiperSlide>
       <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/node.webp" alt="imagen de node" /></SwiperSlide>
-      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/py.webp" alt="imagen de python" /></SwiperSlide>
+      <SwiperSlide style={swiperStyles.slide}><img style={swiperStyles.image} src="/assets/Python.webp" alt="imagen de python" /></SwiperSlide>
  
     </Swiper>
   );
