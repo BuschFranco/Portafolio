@@ -33,7 +33,7 @@ Para correr el proyecto localmente, sigue estos pasos:
 4. Inicia el servidor de desarrollo:
 
     ```bash
-    npm start
+    npm run dev
     ```
 
 ## Estructura del Proyecto
