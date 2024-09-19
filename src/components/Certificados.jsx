@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 
 const images = [
   { src: '/assets/certificates/AttractAndEngage.webp', alt: 'Image 1', title: 'Attract and Engage Customers with Digital Marketing' },
+  { src: '/assets/certificates/FromLikesToLeads.webp', alt: 'Image 1', title: 'From Likes To Leads: Interact with Customers Online' },
   { src: '/assets/certificates/GoogleAI.webp', alt: 'Image 1', title: 'Google Ai Essentials' },
   { src: '/assets/certificates/FoundationsDigitalMarketing.webp', alt: 'Image 1', title: 'Foundations of Digital Marketing and E-commerce' },
   { src: '/assets/certificates/Programacion.webp', alt: 'Image 1', title: 'Desarrollo Web con HTML5, CSS3, JS, AJAX, PHP y MySQL' },
+  { src: '/assets/certificates/CSharpBasic.webp', alt: 'Image 1', title: 'Visual Studio 2022 C# - Nivel Básico' },
 ];
 
 const ImageGrid = () => {
