@@ -6,6 +6,7 @@ const images = [
   { src: '/assets/certificates/GoogleAI.webp', alt: 'Image 1', title: 'Google Ai Essentials' },
   { src: '/assets/certificates/FoundationsDigitalMarketing.webp', alt: 'Image 1', title: 'Foundations of Digital Marketing and E-commerce' },
   { src: '/assets/certificates/Programacion.webp', alt: 'Image 1', title: 'Desarrollo Web con HTML5, CSS3, JS, AJAX, PHP y MySQL' },
+  { src: '/assets/certificates/php-sql-certificado.webp', alt: 'Image 1', title: 'Desarrolla un sistema web POS desde cero con PHP NATIVO' },
   { src: '/assets/certificates/CSharpBasic.webp', alt: 'Image 1', title: 'Visual Studio 2022 C# - Nivel Básico' },
 ];
 
