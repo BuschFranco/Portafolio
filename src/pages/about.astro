@@ -62,6 +62,11 @@ import ChatBot from '../components/ChatBot.astro';
 </BaseLayout>
 
 <style>
+
+	a{
+		text-decoration:underline ;
+	}
+
 	.about {
 		display: flex;
 		flex-direction: column;
@@ -94,10 +99,6 @@ import ChatBot from '../components/ChatBot.astro';
 		text-decoration: 1px solid underline transparent;
 		text-underline-offset: 0.25em;
 		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
 		text-decoration-color: currentColor;
 	}
 

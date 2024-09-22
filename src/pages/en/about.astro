@@ -95,13 +95,9 @@ import ChatBot from '../../components/ChatBot.astro';
 
 	.content :global(a) {
 		text-decoration: 1px solid underline transparent;
+		text-decoration-color: currentColor;
 		text-underline-offset: 0.25em;
 		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
 	}
 
 	@media (min-width: 50em) {
