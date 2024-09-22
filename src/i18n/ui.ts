@@ -13,9 +13,9 @@ export const languages = {
       'nav.about': 'Conóceme',
       'nav.benefit': 'Beneficios',
 
-      "skill.fs":"Creación de aplicaciones web y móviles. Manejo tanto el frontend como el backend, asegurando soluciones integrales, eficientes y escalables.",
-      "skill.r":"Muy bueno ofreciendo soluciones efectivas. Mi enfoque proactivo y analítico me permite resolver desafíos de manera eficiente, garantizando la continuidad y éxito de los proyectos.",
-      "skill.da":"En un proyecto, esta habilidad permite detectar y corregir errores a tiempo, asegurando la entrega exitosa de un producto.",
+      "skill.fs":"Desarrollo de aplicaciones web y móviles, abarcando tanto la interfaz de usuario (frontend) como la lógica del servidor y la gestión de bases de datos (backend). Garantizando una experiencia fluida y un alto rendimiento en todas las capas del proyecto.",
+      "skill.r":"Especializado en la implementación de soluciones estratégicas y efectivas. Mi enfoque proactivo y analítico me permite resolver desafíos de manera eficiente, garantizando la continuidad y éxito de los proyectos.",
+      "skill.da":"La capacidad de identificar errores con precisión y antelación es vital para garantizar la calidad del proyecto. Esta habilidad contribuye a optimizar procesos, mitigar riesgos y asegurar la entrega puntual y conforme a los estándares exigidos.",
       "skill.t1":"Resolutivo",
       "skill.t2":"Atención al Detalle",
 
@@ -40,9 +40,9 @@ export const languages = {
       'nav.about': 'Get to know me',
       'nav.benefit': 'Benefits',
 
-      "skill.fs":"Creation of web and mobile applications. I handle both the frontend and backend, ensuring comprehensive, efficient, and scalable solutions.",
-      "skill.r":"Very good at providing effective solutions. My proactive and analytical approach allows me to solve challenges efficiently, ensuring the continuity and success of projects.",
-      "skill.da":"In a project, this skill allows for the timely detection and correction of errors, ensuring the successful delivery of a product.",
+      "skill.fs": "Development of web and mobile applications, covering both the user interface (frontend) and server-side logic and database management (backend). Ensuring a seamless experience and high performance across all project layers.",
+  "skill.r": "Specialized in implementing strategic and effective solutions. My proactive and analytical approach allows me to efficiently solve challenges, ensuring the continuity and success of projects.",
+  "skill.da": "The ability to identify errors accurately and in advance is essential to ensuring project quality. This skill helps optimize processes, mitigate risks, and ensure on-time delivery in line with required standards.",
       "skill.t1":"Problem Solver",
       "skill.t2":"Attention to Detail",
 
