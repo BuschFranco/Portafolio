@@ -41,7 +41,7 @@ const projects = (await getCollection('work'))
 					tagline="Soy un Desarrollador de Software que actualmente vive en Buenos Aires. Argentina."
 					align="start"
 				>
-				<p style="font-size: 1.2rem;">Contáctame para desarrollar la Página Web de tu negocio o proyecto, implementando las mejores prácticas de Marketing Digital y respetando la Identidad de tu Marca.</p>
+				<p style="font-size: 1.2rem;">Contáctame para desarrollar la <span class="keyword">Página Web</span> de tu negocio o proyecto, implementando las mejores prácticas de <span class="keyword">Marketing Digital</span> y respetando la <span class="keyword">Identidad de tu Marca</span>.</p>
 					<div class="roles">
 						<a href="#conteinerContact"><span class="but">Contáctame</span></a>
 						<a href="/curriculum"><span class="but">Ver Curriculum Online</span></a>
@@ -103,6 +103,10 @@ const projects = (await getCollection('work'))
 </BaseLayout>
 
 <style>
+
+	.keyword{
+		color: #c561f6;
+	}
 
 	.but {
 		display: flex;

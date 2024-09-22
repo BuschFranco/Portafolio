@@ -39,7 +39,7 @@ const projects = (await getCollection('work'))
 					tagline="I am a Software Developer currently living in Buenos Aires, Argentina."
 					align="start"
 				>
-				<p style="font-size: 1.2rem;">Contact me to develop the website for your business or project, implementing the best digital marketing practices and respecting your brand's identity.</p>
+				<p style="font-size: 1.2rem;">Contact me to develop the <span class="keyword">Website</span> for your business or project, implementing the best <span class="keyword">Digital Marketing</span> practices and respecting your <span class="keyword">Brand's Identity</span>.</p>
 					<div class="roles">
 						<a href="#conteinerContact"><span class="but">Contact me</span></a>
 						<a href="/en/curriculum"><span class="but">View Resume Online</span></a>
@@ -95,6 +95,11 @@ const projects = (await getCollection('work'))
 </BaseLayout>
 
 <style>
+
+
+	.keyword{
+		color: #c561f6;
+	}
 
 	.but {
 		display: flex;
