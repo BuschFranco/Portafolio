@@ -4,6 +4,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import ChatBot from '../components/ChatBot.astro';
+
+const brand2 = "}"
+const brand = "{"
 ---
 
 <BaseLayout title="Conóceme | Busch Franco" description="Descubre a Franco Busch, un desarrollador web y de software en Buenos Aires, especializado en el desarrollo de páginas web y aplicaciones para empresas y pymes. A través de mi agencia de desarrollo web, ofrezco soluciones personalizadas utilizando tecnologías como Dynamics 365, PHP y JavaScript. Con una sólida trayectoria como desarrollador full stack, mi pasión por el diseño y la creación de sitios web me permite brindar servicios completos para quienes buscan comprar una página web o desarrollar aplicaciones a medida.">
@@ -54,14 +57,39 @@ import ChatBot from '../components/ChatBot.astro';
 					</p>
 				</div>
 			</section>
+
+			
 			
 		</main>
+		<div class="site-title">
+			<img class="iconimg" src="/logo.webp" alt="">
+			<p><span class="pink">{brand}</span>buschfranco.com<span class="pink">{brand2}</span></p>
+		</div>
 
 		<ContactCTA />
 	</div>
 </BaseLayout>
 
 <style>
+
+.site-title {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+		justify-content: center;
+		color: var(--gray-0);
+		margin: auto;
+		font-size: 1.5rem;
+		font-family: var(--font-brand);
+		font-weight: 500;
+	}.iconimg{
+		width: 2.5rem;
+		margin-top: 0;
+		box-shadow: none;
+		border-radius: 0;
+	}.pink{
+		color: #c561f6;
+	}
 
 	a{
 		text-decoration:underline ;

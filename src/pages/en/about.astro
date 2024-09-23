@@ -4,6 +4,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContactCTA from '../../components/ContactCTA.astro';
 import Hero from '../../components/Hero.astro';
 import ChatBot from '../../components/ChatBot.astro';
+
+const brand2 = "}"
+const brand = "{"
 ---
 
 <BaseLayout title="How i can help you | Busch Franco" description="Meet Franco Busch, a software and web developer from Buenos Aires with experience in Dynamics 365, PHP, JavaScript, and more. Discover my background, skills, and passion for technology">
@@ -58,6 +61,11 @@ import ChatBot from '../../components/ChatBot.astro';
 			
 			
 		</main>
+
+		<div class="site-title">
+			<img class="iconimg" src="/logo.webp" alt="">
+			<p><span class="pink">{brand}</span>buschfranco.com<span class="pink">{brand2}</span></p>
+		</div>
 
 		<ContactCTA />
 	</div>
@@ -114,5 +122,24 @@ import ChatBot from '../../components/ChatBot.astro';
 			display: contents;
 			font-size: var(--text-lg);
 		}
+	}
+
+	.site-title {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+		justify-content: center;
+		color: var(--gray-0);
+		margin: auto;
+		font-size: 1.5rem;
+		font-family: var(--font-brand);
+		font-weight: 500;
+	}.iconimg{
+		width: 2.5rem;
+		margin-top: 0;
+		box-shadow: none;
+		border-radius: 0;
+	}.pink{
+		color: #c561f6;
 	}
 </style>
