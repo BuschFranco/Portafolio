@@ -17,25 +17,31 @@ const t = useTranslations(lang);
     <ChatBot/>
     <iframe id="cv" src="/assets/BuschFrancoCV.pdf">
         Este navegador no soporta la visualización de PDF.
-
     </iframe>
+              
+    
     <a download="CV-BuschFranco" href="/assets/BuschFrancoCV.pdf"><span class="but">Descargar Curriculum <i class="fi fi-br-download"></i></span> </a>
 
     <section id="section-me">
         <h2 class="section-title">Sobre mí</h2>
         <div class="content">
-            <p>
-                Me llamo Franco Busch, originario de Buenos Aires, Argentina. Mi enfoque profesional se centra en el desarrollo web, la programación y las nuevas tecnologías.
-                Desde mi infancia, he tenido una afinidad con la informática, reconociéndola como una puerta esencial hacia el ámbito laboral y el desarrollo global.
-            </p>
-            <p>
-                <br>
-                Soy un Desarrollador con experiencia en tecnologías como Astro y Flutter, así como en los entornos de Dynamics 365 (D365) y WordPress. Me apasiona la industria tecnológica y el marketing digital, y además cuento con una sólida base en temas financieros.
-
-Siempre busco oportunidades para aprender y crecer profesionalmente, ya que estoy convencido de que la evolución constante es vital para ofrecer mejores soluciones. Me entusiasma mucho la idea de contribuir en proyectos innovadores y retadores, donde pueda aplicar mis habilidades y seguir desarrollándome como profesional.
-
-            </p>
+            <div>
+                <p>
+                    Me llamo Franco Busch, originario de Buenos Aires, Argentina. Mi enfoque profesional se centra en el desarrollo web, la programación y las nuevas tecnologías.
+                    Desde mi infancia, he tenido una afinidad con la informática, reconociéndola como una puerta esencial hacia el ámbito laboral y el desarrollo global.
+                </p>
+                <p>
+                    <br>
+                    Soy un Desarrollador con experiencia en tecnologías como Astro y Flutter, así como en los entornos de Dynamics 365 (D365) y WordPress. Me apasiona la industria tecnológica y el marketing digital, y además cuento con una sólida base en temas financieros.
+    
+    Siempre busco oportunidades para aprender y crecer profesionalmente, ya que estoy convencido de que la evolución constante es vital para ofrecer mejores soluciones. Me entusiasma mucho la idea de contribuir en proyectos innovadores y retadores, donde pueda aplicar mis habilidades y seguir desarrollándome como profesional.
+    
+                </p>
+            </div>
+       
+            <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="francobusch" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ar.linkedin.com/in/francobusch?trk=profile-badge"></a></div>
         </div>
+       
     </section>
 
     <div>
@@ -49,9 +55,44 @@ Siempre busco oportunidades para aprender y crecer profesionalmente, ya que esto
         <TechGrid client:load/>
     </div>
 
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
 </BaseLayout>
 
 <style> 
+    .content {
+    display: flex;
+    flex-direction: row;
+}
+
+.badge-base__link {
+    display: none;
+}
+
+/* media query para móviles */
+@media (max-width: 768px) { 
+    .content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .badge-base__link {
+        display: block;
+        margin-top: 1rem; 
+    }
+}
+
+#section-me {
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    padding-bottom: 2rem;
+}
+
 
     #certificate-title{
         text-align: center;
@@ -116,14 +157,4 @@ Siempre busco oportunidades para aprender y crecer profesionalmente, ya que esto
         margin-top: 3rem;
 		margin-bottom: 2rem;
 	}
-
-
-    #section-me{
-        width: 80%;
-        margin: auto;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }.section-title{
-        padding-bottom: 2rem;
-    }
 </style>
