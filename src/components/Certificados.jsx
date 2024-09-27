@@ -40,6 +40,7 @@ const ImageGrid = () => {
     cursor: 'pointer',
     overflow: 'hidden',
     transition: 'transform 0.3s ease',
+    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
   };
 
   const imageStyle = {
