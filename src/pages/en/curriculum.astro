@@ -12,7 +12,7 @@ const t = useTranslations(lang);
 ---
 
 <BaseLayout title="Resume Online | Busch Franco" description="Download the resume of Franco Busch, a web and software developer from Buenos Aires with extensive experience in designing and developing websites, mobile applications, and custom business solutions. With expertise in technologies like PHP, JavaScript, and Dynamics 365, Franco offers comprehensive services as a full stack developer. Discover how his background and skills can contribute to the success of your next project.">
-	<Hero title="Curriculum Online" tagline="Explore my background and technical skills." />
+	<Hero title="Online Resume" tagline="Explore my background and technical skills." />
     <ChatBot/>
     <iframe id="cv" src="/assets/BuschFrancoCV.pdf">
         This browser does not support PDF viewing.
@@ -24,14 +24,18 @@ const t = useTranslations(lang);
     <section id="section-me">
         <h2 class="section-title">About me</h2>
         <div class="content">
-            <p>
-                My name is Franco Busch, originally from Buenos Aires, Argentina. My professional focus is on web development, programming, and new technologies.
-Since childhood, I have had an affinity for computing, recognizing it as an essential gateway to the job market and global development.
-            </p>
-            <p>
-                <br>
-                I am a Developer with experience in technologies like Astro and Flutter, as well as in Dynamics 365 (D365) and WordPress environments. I am passionate about the tech industry and digital marketing, and I also have a solid foundation in financial topics. I’m always looking for opportunities to learn and grow professionally, as I believe constant evolution is vital to offering better solutions. I’m very excited about the idea of contributing to innovative and challenging projects, where I can apply my skills and continue developing as a professional.
-            </p>
+            <div>
+                <p>
+                    My name is Franco Busch, originally from Buenos Aires, Argentina. My professional focus is on web development, programming, and new technologies.
+    Since childhood, I have had an affinity for computing, recognizing it as an essential gateway to the job market and global development.
+                </p>
+                <p>
+                    <br>
+                    I am a Developer with experience in technologies like Astro and Flutter, as well as in Dynamics 365 (D365) and WordPress environments. I am passionate about the tech industry and digital marketing, and I also have a solid foundation in financial topics. I’m always looking for opportunities to learn and grow professionally, as I believe constant evolution is vital to offering better solutions. I’m very excited about the idea of contributing to innovative and challenging projects, where I can apply my skills and continue developing as a professional.
+                </p>
+            </div>
+            
+            <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="francobusch" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ar.linkedin.com/in/francobusch?trk=profile-badge"></a></div>
         </div>
     </section>
 
@@ -44,10 +48,36 @@ Since childhood, I have had an affinity for computing, recognizing it as an esse
         <h3>Technologies used</h3>
         <TechGrid client:load/>
     </div>
+
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     
 </BaseLayout>
 
 <style>    
+
+.content {
+    display: flex;
+    align-items: center;
+    
+}
+
+.badge-base__link {
+    display: none;
+
+}
+
+/* media query para móviles */
+@media (max-width: 768px) { 
+    .content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .badge-base__link {
+        display: block;
+        margin-top: 1rem; 
+    }
+}
 
 #certificate-title{
         text-align: center;
