@@ -14,13 +14,13 @@
     "redeploy": "gh-pages build"
   },
   "dependencies": {
-    "@astrojs/db": "^0.14.1",
-    "@astrojs/mdx": "^3.1.7",
+    "@astrojs/db": "^0.14.3",
+    "@astrojs/mdx": "^3.1.9",
     "@astrojs/partytown": "^2.1.2",
     "@astrojs/react": "^3.6.2",
-    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/sitemap": "^3.2.1",
     "@fortawesome/fontawesome-free": "^6.5.2",
-    "astro": "^4.15.9",
+    "astro": "^4.16.12",
     "node-fetch": "^3.3.2",
     "swiper": "^11.1.12"
   },
