@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 
 const images = [
+  { src: '/assets/certificates/MakeTheSale.webp', alt: 'Certificado de Make The Sale: Build, Launch, and Manage E-commerce Stores', title: 'Make The Sale: Build, Launch, and Manage E-commerce Stores' },
+  { src: '/assets/certificates/AssessForSuccess.webp', alt: 'Certificado de Asses for Success: Marketing Analytics and Measurement', title: 'Asses for Success: Marketing Analytics and Measurement' },
   { src: '/assets/certificates/AttractAndEngage.webp', alt: 'Certificado de Attract and Engage Customers with Digital Marketing', title: 'Attract and Engage Customers with Digital Marketing' },
   { src: '/assets/certificates/EmailMarketing.webp', alt: 'Certificado de Think Outside the Inbox: Email Marketing', title: 'Think Outside the Inbox: Email Marketing' },
   { src: '/assets/certificates/FromLikesToLeads.webp', alt: 'Certificado de From Likes To Leads: Interact with Customers Online', title: 'From Likes To Leads: Interact with Customers Online' },
   { src: '/assets/certificates/GoogleAI.webp', alt: 'Certificado de Google Ai Essentials', title: 'Google Ai Essentials' },
   { src: '/assets/certificates/FoundationsDigitalMarketing.webp', alt: 'Certificado de Foundations of Digital Marketing and E-commerce', title: 'Foundations of Digital Marketing and E-commerce' },
+  
   { src: '/assets/certificates/Programacion.webp', alt: 'Certificado de Desarrollo Web con HTML5, CSS3, JS, AJAX, PHP y MySQL', title: 'Desarrollo Web con HTML5, CSS3, JS, AJAX, PHP y MySQL' },
+  { src: '/assets/certificates/Laravel9API.webp', alt: 'Certificado de Curso de Laravel 9 desde cero + APIs RESTFULL', title: 'Curso de Laravel 9 desde cero + APIs RESTFULL' },
   { src: '/assets/certificates/frontend - fullstack - js.webp', alt: 'Certificado de Universidad Desarrollo Web - FrontEnd Web Developer', title: 'Universidad Desarrollo Web - FrontEnd Web Developer' },
   { src: '/assets/certificates/php-sql-certificado.webp', alt: 'Certificado de esarrolla un sistema web POS desde cero con PHP NATIVO', title: 'Desarrolla un sistema web POS desde cero con PHP NATIVO' },
   { src: '/assets/certificates/CSharpBasic.webp', alt: 'Certificado de Visual Studio 2022 C# - Nivel Básico', title: 'Visual Studio 2022 C# - Nivel Básico' },
