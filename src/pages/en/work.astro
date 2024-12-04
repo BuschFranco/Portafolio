@@ -12,7 +12,7 @@ import ChatBot from '../../components/ChatBot.astro';
 
 const projects = (await getCollection('work'))
 	.sort((a, b) =>  a.data.publishDate.valueOf() - b.data.publishDate.valueOf())
-	.slice(0, 4);
+	.slice(0, 6);
 ---
 
 <BaseLayout
