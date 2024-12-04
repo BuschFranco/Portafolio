@@ -46,6 +46,9 @@ const t = useTranslations(lang);
 
     <div>
         <h3 id="certificate-title">Certificados Profesionales</h3>
+        <!-- Insignias -->
+         <img class="insignia" src="/assets/google-digital-marketing-and-e-commerce-professiona.png" alt="Google Digital Marketing and E-commerce Badge">
+
         <Certificados client:load/>
     </div>
     
@@ -99,7 +102,11 @@ const t = useTranslations(lang);
     #certificate-title{
         text-align: center;
         margin-top: 2rem;
-    }
+    }.insignia {
+        width: 17rem;
+        margin: auto;
+        display: block; /* Asegura que se aplique margin: auto correctamente */
+         }
     #cv {
             display: block;
             margin: auto;

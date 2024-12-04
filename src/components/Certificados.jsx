@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
 const images = [
+  { src: '/assets/certificates/GoogleDigitalMarketingandE-commerceBadge.webp', alt: 'Google Digital Marketing and E-commerce Badge', title: 'Google Digital Marketing and E-commerce Badge' },
+  { src: '/assets/certificates/GoogleDigitalMarketingandE-commerceSpecializationCertification.webp', alt: 'Google Digital Marketing and E-commerce Specialization Certification', title: 'Google Digital Marketing and E-commerce Specialization Certification' },
+
+  { src: '/assets/certificates/SatisfactionGuaranteedDevelopCustomerLoyaltyOnline.webp', alt: 'Satisfaction Guaranteed Develop Customer Loyalty Online', title: 'Satisfaction Guaranteed Develop Customer Loyalty Online' },
   { src: '/assets/certificates/MakeTheSale.webp', alt: 'Certificado de Make The Sale: Build, Launch, and Manage E-commerce Stores', title: 'Make The Sale: Build, Launch, and Manage E-commerce Stores' },
   { src: '/assets/certificates/AssessForSuccess.webp', alt: 'Certificado de Asses for Success: Marketing Analytics and Measurement', title: 'Asses for Success: Marketing Analytics and Measurement' },
   { src: '/assets/certificates/AttractAndEngage.webp', alt: 'Certificado de Attract and Engage Customers with Digital Marketing', title: 'Attract and Engage Customers with Digital Marketing' },
