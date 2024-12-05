@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const images = [
   { src: '/assets/certificates/GoogleDigitalMarketingandE-commerceBadge.webp', alt: 'Google Digital Marketing and E-commerce Badge', title: 'Google Digital Marketing and E-commerce Badge' },
-  { src: '/assets/certificates/GoogleDigitalMarketingandE-commerceSpecializationCertification.webp', alt: 'Google Digital Marketing and E-commerce Specialization Certification', title: 'Google Digital Marketing and E-commerce Specialization Certification' },
+  { src: '/assets/certificates/GoogleDigitalMarketingandE-commerceSpecializationCertificate.webp', alt: 'Google Digital Marketing and E-commerce Specialization', title: 'Google Digital Marketing and E-commerce Specialization' },
 
   { src: '/assets/certificates/SatisfactionGuaranteedDevelopCustomerLoyaltyOnline.webp', alt: 'Satisfaction Guaranteed Develop Customer Loyalty Online', title: 'Satisfaction Guaranteed Develop Customer Loyalty Online' },
   { src: '/assets/certificates/MakeTheSale.webp', alt: 'Certificado de Make The Sale: Build, Launch, and Manage E-commerce Stores', title: 'Make The Sale: Build, Launch, and Manage E-commerce Stores' },
