@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import ChatBot from '../components/ChatBot.astro';
+
+const brand2 = "}"
+const brand = "{"
+---    
+  
+<BaseLayout title="Proceso de Desarrollo | Busch Franco" description="Información sobre el proceso de desarrollo que se lleva a cabo a la hora de crear una página o aplicación web">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Proceso de Desarrollo"
+				tagline="Una visión detallada sobre todo el ciclo de desarrollo de un proyecto."
+			>
+
+			<p style="margin: 3rem 0 0 0; font-size: 1.3rem; text-align: start; color:white;">Gracias por considerar mis servicios para el desarrollo de su proyecto. Quiero 
+				explicarle de manera sencilla y clara cómo sería el proceso de trabajo desde el 
+				inicio hasta la entrega final:</p>
+			</Hero>
+			<ChatBot/>
+			
+			
+			<section>
+				<h5 class="section-title"><span style="color: #c561f6;">1.</span> Primera Reunión: Comprender su Idea</h5>
+				<div class="content">
+					<p>
+						El primer paso es reunirnos para que me cuente en detalle su idea y las 
+						necesidades de su proyecto. Quiero entender qué tipo de página web 
+						busca, qué estilo le gusta y qué información o funcionalidad necesita 
+						incluir. Esta reunión puede ser tanto presencial como de manera remota 
+						a través de plataformas como <span style="color: white;">Google Meet, Zoom, Teams, etc.</span>, según lo 
+						que sea más conveniente para usted. 
+					</p>
+				</div>
+			</section>
+			
+			<section>
+				<h5 class="section-title"><span style="color: #c561f6;">2.</span> Prototipos Creativos Sin Costo </h5>
+				<div class="content">
+					<p>
+						Con base en nuestra conversación, crearé un par de diseños prototipo 
+						que reflejen su idea. Estos diseños serán simples, pero le permitirán 
+						visualizar cómo podría verse su página web. Este paso es gratuito y tiene 
+						el objetivo de asegurarnos de estar alineados creativamente antes de 
+						comenzar el trabajo completo.
+					</p>
+				</div>
+			</section>
+			
+			<section>
+				<h5 class="section-title"><span style="color: #c561f6;">3.</span> Luz Verde y Programación </h5>
+				<div class="content">
+					<p>
+						Si los prototipos cumplen con sus expectativas y me da el visto bueno, 
+						comenzaré con la programación de su página web. Este proceso incluye 
+						convertir el diseño en una página funcional que se pueda navegar y usar.
+					</p>
+				</div>
+			</section>
+			
+			<section>
+				<h5 class="section-title"><span style="color: #c561f6;">4.</span> Seguimiento Semanal</h5>
+				<div class="content">
+					<p>
+						Durante el desarrollo, le iré mostrando el avance cada semana para que 
+						pueda ver cómo va tomando forma su página. Esto también permite 
+						hacer ajustes si es necesario. El tiempo estimado de entrega es de 1 mes 
+						y medio a 2 meses, dependiendo de la complejidad. 
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h5 class="section-title"><span style="color: #c561f6;">5.</span> Entrega Final</h5>
+				<div class="content">
+				<p>
+					Al finalizar, le entregaré una página web lista para usar. Como parte del 
+					servicio, incluiré: 
+				</p>
+				<ul>
+					<li><span style="color: white;">Un dominio y hosting gratuito durante 1 año:</span>
+						<ul>
+							<li>Un dominio es el nombre que tendrá su página en Internet (por 
+								ejemplo, <a href="/" target="_blank">www.buschfranco.com</a>). Es lo que sus clientes escribirán 
+								para encontrar su sitio.
+							</li>
+							<li>El hosting es el espacio en un servidor donde se guarda toda la 
+								información de su página para que esté disponible en Internet las 
+								24 horas.
+							</li>
+						</ul>
+					</li>
+					<li>Un <span style="color: white;">Manual de uso</span> para que pueda, por ejemplo, consultar cómo 
+						editar, eliminar o agregar algún servicio, entre otras cosas.
+					</li>
+					<li><span style="color: white;">Integración con Google Analytics:</span>
+						<p>Este servicio le permitirá gestionar el tráfico hacia su página web. Podrá 
+						conocer información como la ubicación de los usuarios, la cantidad de 
+						visitas, el tiempo promedio de sesión y mucho más.</p>
+					</li>
+					<li><span style="color: white;">Integración con Google Ads:</span>
+						<p>Su página web estará lista para ser promocionada a través de campañas 
+						de Google Ads, facilitando la implementación de estrategias de 
+						marketing digital que impulsen la visibilidad de su negocio en Internet.</p>
+					</li>
+				</ul>
+				</div>
+			</section>
+
+			<section>
+				<h5 class="section-title"><span style="color: #c561f6;">6.</span> Costo y Referencia</h5>
+				<div class="content">
+					<p>
+						El precio del proyecto depende de la complejidad de la página. Como referencia, 
+						el costo para una página que presente los servicios de su negocio o información sobre su proyecto, información 
+						sobre usted y un formulario de contacto directo es de <span style="color: white;">700 USD</span>. 
+						Este costo incluye lo mencionado en la entrega final: 
+						<ul>
+							<li style="color: white;">Dominio y hosting gratuito durante 1 año.</li>
+							<li style="color: white;">Un manual de uso.</li>
+							<li style="color: white;">Integración con Google Analytics.</li>
+							<li style="color: white;">Integración con Google Ads.</li>
+						</ul>
+					</p>
+				</div>
+			</section>
+
+			
+			
+		</main>
+		<div class="site-title">
+			<a download="ProcesoDesarrollo-BF" href="/assets/ProcesodeDesarrolloPaginaWeb.pdf"><span class="but">Descargar Documento<i class="fi fi-br-download"></i></span> </a>
+			<img class="iconimg" src="/logo.webp" alt="">
+			<p><span class="pink">{brand}</span>buschfranco.com<span class="pink">{brand2}</span></p>
+		</div>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+
+.site-title {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+		justify-content: center;
+		color: var(--gray-0);
+		margin: auto;
+		font-size: 1.5rem;
+		font-family: var(--font-brand);
+		font-weight: 500;
+	}.iconimg{
+		width: 2.5rem;
+		margin-top: 0;
+		box-shadow: none;
+		border-radius: 0;
+	}.pink{
+		color: #c561f6;
+	}
+
+	a{
+		text-decoration:underline ;
+	}
+
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+		text-decoration-color: currentColor;
+	}
+
+	.but {
+		display: flex;
+		padding: 0.5rem 1rem;
+		gap: 0.5rem;
+		color: var(--accent-text-over);
+		border: 1px solid var(--accent-regular);
+		background-color: var(--accent-regular);
+		border-radius: 999rem;
+		font-size: var(--text-md);
+		line-height: 1.35;
+		white-space: nowrap;
+
+		font-weight: 600;
+
+		background-image: linear-gradient(0deg,#7611a6,#c561f6,#7611a6,#c561f6);
+        background-size: 100% 300%;
+        animation: animateBg 7s infinite;
+
+		transition: 0.3s;
+	}.but:hover{
+		box-shadow: -5px 5px 0px rgb(255, 255, 255);
+        transform: translate(5px, -5px);
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
