@@ -4,6 +4,8 @@ const images = [
   { src: '/assets/certificates/GoogleDigitalMarketingandE-commerceBadge.webp', alt: 'Google Digital Marketing and E-commerce Badge', title: 'Google Digital Marketing and E-commerce Badge' },
   { src: '/assets/certificates/GoogleDigitalMarketingandE-commerceSpecializationCertificate.webp', alt: 'Google Digital Marketing and E-commerce Specialization', title: 'Google Digital Marketing and E-commerce Specialization' },
 
+  { src: '/assets/certificates/FoundationsofProjectManagement.webp', alt: 'Certificado de Foundations Of Project Management', title: 'Foundations Of Project Management' },
+
   { src: '/assets/certificates/SatisfactionGuaranteedDevelopCustomerLoyaltyOnline.webp', alt: 'Satisfaction Guaranteed Develop Customer Loyalty Online', title: 'Satisfaction Guaranteed Develop Customer Loyalty Online' },
   { src: '/assets/certificates/MakeTheSale.webp', alt: 'Certificado de Make The Sale: Build, Launch, and Manage E-commerce Stores', title: 'Make The Sale: Build, Launch, and Manage E-commerce Stores' },
   { src: '/assets/certificates/AssessForSuccess.webp', alt: 'Certificado de Asses for Success: Marketing Analytics and Measurement', title: 'Asses for Success: Marketing Analytics and Measurement' },
