@@ -1,0 +1,167 @@
+---
+---
+
+<div class="adminContainer">
+    <button class="adminBtn">Admin</button>
+    <form class="adminForm" action="" method="POST" style="display: block;">
+        <div>
+            <label for="username"><i class="fa-solid fa-user"></i></label>
+            <input type="text" maxlength="15" id="username" name="username" required>
+            
+            <label for="password"><i class="fa-solid fa-key"></i></label>
+            <input type="password" maxlength="15" id="password" name="password" required>
+        </div>	
+        
+        <div style="display: flex; margin-top: 1rem;">
+            <button type="submit">
+                <span class="button-text">Acceder</span>
+                <span class="loading-spinner" style="display: none;"></span>
+            </button>
+            <p id="message" style="display: none;"></p>
+            <p id="error" style="display: none;"></p>
+        </div>
+            
+      </form>
+</div>
+
+<script>
+
+	document.querySelector('.adminBtn').addEventListener('click', function(event){
+		event.preventDefault();
+		const form = document.querySelector('.adminForm');
+		form.style.display = form.style.display === 'block' ? 'none' : 'block';
+	});
+
+	document.addEventListener('click', function(event) {
+		const form = document.querySelector('.adminForm');
+		const adminBtn = document.querySelector('.adminBtn');
+		if (form.style.display === 'block' && !form.contains(event.target) && !adminBtn.contains(event.target)) {
+			form.style.display = 'none';
+		}
+	});
+
+    const loading = document.querySelector('.loading-spinner');
+    const btnText = document.querySelector('.button-text');
+    const btn = document.querySelector('.adminForm button');
+
+    const message = document.querySelector('#message');
+    const error = document.querySelector('#error');
+
+    document.querySelector('.adminForm').addEventListener('submit', async function(event){
+        event.preventDefault();
+        error.style.display = 'none';
+        message.style.display = 'none';
+        btn.disabled = true;
+        loading.style.display = 'inline-block';
+        btnText.style.display = 'none';
+
+        const username = document.querySelector('#username').value;
+        const password = document.querySelector('#password').value;
+
+        if(username === 'asdasd221312' && password === 'admasdasdsa123in'){
+           alert('Bienvenido Admin');
+        }
+        else{
+            setTimeout(()=>{
+                loading.style.display = 'none';
+                btnText.style.display = 'block';
+                btn.disabled = false;
+                error.textContent = "Invalid User"
+                error.style.display = 'block';
+            },2000)
+            
+        }
+
+       
+    });
+</script>
+
+<style>
+    .adminContainer{
+		position: absolute;
+		top: 7rem;
+        left: 2rem;
+		width: auto;
+        z-index: 9999;
+	}
+
+	.adminBtn{
+		border-radius: .9rem;
+		padding: .7rem 1rem;
+		font-weight: bold;
+		border: 2px solid #c561f6;
+		color: #222;
+		box-shadow: 0 0 10px 1px #c561f6;
+	}
+
+	.adminForm{
+		color:  #c561f6;
+		background-color: #1e0e27;
+		padding: 1rem;
+		border-radius: 0rem 1rem 1rem 1rem;
+		margin-left: .5rem;
+		box-shadow: 0 0 10px 2px #c561f6;
+		width: 16rem;
+	
+	}.adminForm input{
+		border-radius: .4rem;
+		padding: .1rem;
+		margin-top: .5rem;
+		margin-left: .8rem;
+		text-align: center;
+		border: none;
+	}.adminForm button{
+		border-radius: .4rem;
+		border: none;
+		padding: .3rem 1rem;
+		background-color: white;
+		color: #1e0e27;
+		font-weight: bold;
+		box-shadow: 0 0 10px 1px #c561f6;
+        transition: 0.6s;
+	}
+
+    #error{
+        margin-left: 1rem;
+        color: red;
+        font-weight: bold;
+
+        animation: slideLeftFadeIn 1.4s;
+    }#message{
+        margin-left: 1rem;
+        color: rgb(0, 255, 0);
+        font-weight: bold;
+
+        animation: slideLeftFadeIn 1.4s;
+    }
+
+     /* >>>>>>>>>>>> Animaciones para botones y cargas <<<<<<<<<<<<<<<< */
+
+  .loading-spinner {
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-top: 3px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    animation: spin 0.8s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+  }@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes slideLeftFadeIn {
+      0% {
+        transform: translateX(-3.5rem);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+</style>
