@@ -40,11 +40,13 @@ const brand = "{"
 		<br> <div class="adminContainer">
 				<button class="adminBtn">Admin</button>
 				<form class="adminForm" action="" method="POST" style="display: none;">
-					<label for="username"><i class="fa-solid fa-user"></i></label>
-					<input type="text" id="username" name="username" required>
-					
-					<label for="password"><i class="fa-solid fa-key"></i></label>
-					<input type="password" id="password" name="password" required>
+					<div>
+						<label for="username"><i class="fa-solid fa-user"></i></label>
+						<input type="text" id="username" name="username" required>
+						
+						<label for="password"><i class="fa-solid fa-key"></i></label>
+						<input type="password" id="password" name="password" required>
+					</div>	
 					
 					<button type="submit">Iniciar Sesión</button>
 				  </form>
@@ -182,6 +184,14 @@ const brand = "{"
 		const form = document.querySelector('.adminForm');
 		form.style.display = form.style.display === 'block' ? 'none' : 'block';
 	});
+
+	document.addEventListener('click', function(event) {
+		const form = document.querySelector('.adminForm');
+		const adminBtn = document.querySelector('.adminBtn');
+		if (form.style.display === 'block' && !form.contains(event.target) && !adminBtn.contains(event.target)) {
+			form.style.display = 'none';
+		}
+	});
 </script>
 
 <style>
@@ -204,14 +214,17 @@ const brand = "{"
 		border-radius: .9rem;
 		padding: .7rem 1rem;
 		font-weight: bold;
+		border: 2px solid #c561f6;
+		color: #222;
+		box-shadow: 0 0 10px 1px #c561f6;
 	}
 
 	.adminForm{
 		color:  #c561f6;
 		background-color: #1e0e27;
 		padding: 1rem;
-		border-radius: 1rem;
-		
+		border-radius: 0rem 1rem 1rem 1rem;
+		margin-left: .5rem;
 		box-shadow: 0 0 10px 2px #c561f6;
 		width: 15rem;
 	
