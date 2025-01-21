@@ -58,8 +58,16 @@
         const username = document.querySelector('#username').value;
         const password = document.querySelector('#password').value;
 
-        if(username === 'asdasd221312' && password === 'admasdasdsa123in'){
-           alert('Bienvenido Admin');
+        if(username === 'Buschfranc0' && password === 'NaiTeAmo123'){
+            setTimeout(()=>{
+                message.textContent = "Welcome Admin";
+                message.style.display = 'block';
+                loading.style.display = 'none';
+                btnText.style.display = 'block';
+                btn.style.display = 'none';
+            },2000)
+           
+
         }
         else{
             setTimeout(()=>{
@@ -103,7 +111,7 @@
         box-shadow: 0 0 10px 2px #c561f6;
         width: 16rem;
 
-        animation: slideIn 1s;
+        animation: slideLeftFadeIn 1s;
     
     }.adminForm input{
         border-radius: .4rem;
@@ -130,7 +138,7 @@
 
         animation: slideLeftFadeIn 1.4s;
     }#message{
-        margin-left: 1rem;
+        margin: auto;
         color: rgb(0, 255, 0);
         font-weight: bold;
 
@@ -167,15 +175,4 @@
         opacity: 1;
       }
     }
-
-    @keyframes slideIn {
-  0% {
-    transform: translate(-10%);
-    opacity: 0; /* Comienza invisible */
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1; /* Totalmente visible */
-  }
-}
 </style>
