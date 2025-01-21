@@ -37,6 +37,18 @@ const brand = "{"
 			<img class="iconimg" src="/logo.webp" alt="">
 			<p><span class="pink">{brand}</span>buschfranco.com<span class="pink">{brand2}</span></p>
 		</a>
+		<br> <div class="adminContainer">
+				<button class="adminBtn">Admin</button>
+				<form class="adminForm" action="" method="POST" style="display: none;">
+					<label for="username">Usuario: </label>
+					<input type="text" id="username" name="username" required>
+					
+					<label for="password">Contraseña:</label>
+					<input type="password" id="password" name="password" required>
+					
+					<button type="submit">Iniciar Sesión</button>
+				  </form>
+			</div>
 		<menu-button>
 			<template>
 				<button class="menu-button" aria-expanded="false">
@@ -162,6 +174,14 @@ const brand = "{"
 		}
 	}
 	customElements.define('menu-button', MenuButton);
+
+
+
+	document.querySelector('.adminBtn').addEventListener('click', function(event){
+		event.preventDefault();
+		const form = document.querySelector('.adminForm');
+		form.style.display = form.style.display === 'block' ? 'none' : 'block';
+	});
 </script>
 
 <style>
@@ -172,6 +192,43 @@ const brand = "{"
 
 	.iconimg{
 		width: 2rem;
+	}
+
+	.adminContainer{
+		position: absolute;
+		top: 7rem;
+		width: auto;
+	}
+
+	.adminBtn{
+		border-radius: .9rem;
+		padding: .7rem 1rem;
+		font-weight: bold;
+	}
+
+	.adminForm{
+		color:  #c561f6;
+		background-color: #1e0e27;
+		padding: 1rem;
+		border-radius: 1rem;
+		
+		box-shadow: 0 0 10px 2px #c561f6;
+		width: 20rem;
+	
+	}.adminForm input{
+		border-radius: .4rem;
+		padding: .1rem;
+		margin-top: .5rem;
+		border: none;
+	}.adminForm button{
+		margin-top: 1rem;
+		border-radius: .4rem;
+		border: none;
+		padding: .3rem;
+		background-color: white;
+		color: #1e0e27;
+		font-weight: bold;
+		box-shadow: 0 0 10px 1px #c561f6;
 	}
 
 	nav {
