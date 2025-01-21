@@ -30,7 +30,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 const brand2 = "}"
 const brand = "{"
 ---
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <nav>
 	<div class="menu-header">
 		<a href={getRelativeLocaleUrl(currentLocale ?? "","")} class="site-title">
@@ -40,10 +40,10 @@ const brand = "{"
 		<br> <div class="adminContainer">
 				<button class="adminBtn">Admin</button>
 				<form class="adminForm" action="" method="POST" style="display: none;">
-					<label for="username">Usuario: </label>
+					<label for="username"><i class="fa-solid fa-user"></i></label>
 					<input type="text" id="username" name="username" required>
 					
-					<label for="password">Contraseña:</label>
+					<label for="password"><i class="fa-solid fa-key"></i></label>
 					<input type="password" id="password" name="password" required>
 					
 					<button type="submit">Iniciar Sesión</button>
@@ -213,12 +213,14 @@ const brand = "{"
 		border-radius: 1rem;
 		
 		box-shadow: 0 0 10px 2px #c561f6;
-		width: 20rem;
+		width: 15rem;
 	
 	}.adminForm input{
 		border-radius: .4rem;
 		padding: .1rem;
 		margin-top: .5rem;
+		margin-left: .5rem;
+		text-align: center;
 		border: none;
 	}.adminForm button{
 		margin-top: 1rem;
