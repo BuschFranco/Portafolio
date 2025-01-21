@@ -78,48 +78,50 @@
 
 <style>
     .adminContainer{
-		position: absolute;
-		top: 7rem;
+        position: absolute;
+        top: 7rem;
         left: 2rem;
-		width: auto;
+        width: auto;
         z-index: 9999;
-	}
+    }
 
-	.adminBtn{
-		border-radius: .9rem;
-		padding: .7rem 1rem;
-		font-weight: bold;
-		border: 2px solid #c561f6;
-		color: #222;
-		box-shadow: 0 0 10px 1px #c561f6;
-	}
+    .adminBtn{
+        border-radius: .9rem;
+        padding: .7rem 1rem;
+        font-weight: bold;
+        border: 2px solid #c561f6;
+        color: #222;
+        box-shadow: 0 0 10px 1px #c561f6;
+    }
 
-	.adminForm{
-		color:  #c561f6;
-		background-color: #1e0e27;
-		padding: 1rem;
-		border-radius: 0rem 1rem 1rem 1rem;
-		margin-left: .5rem;
-		box-shadow: 0 0 10px 2px #c561f6;
-		width: 16rem;
-	
-	}.adminForm input{
-		border-radius: .4rem;
-		padding: .1rem;
-		margin-top: .5rem;
-		margin-left: .8rem;
-		text-align: center;
-		border: none;
-	}.adminForm button{
-		border-radius: .4rem;
-		border: none;
-		padding: .3rem 1rem;
-		background-color: white;
-		color: #1e0e27;
-		font-weight: bold;
-		box-shadow: 0 0 10px 1px #c561f6;
+    .adminForm{
+        color:  #c561f6;
+        background-color: #1e0e27;
+        padding: 1rem;
+        border-radius: 0rem 1rem 1rem 1rem;
+        margin-left: .5rem;
+        box-shadow: 0 0 10px 2px #c561f6;
+        width: 16rem;
+
+        animation: slideIn 1s;
+    
+    }.adminForm input{
+        border-radius: .4rem;
+        padding: .1rem;
+        margin-top: .5rem;
+        margin-left: .8rem;
+        text-align: center;
+        border: none;
+    }.adminForm button{
+        border-radius: .4rem;
+        border: none;
+        padding: .3rem 1rem;
+        background-color: white;
+        color: #1e0e27;
+        font-weight: bold;
+        box-shadow: 0 0 10px 1px #c561f6;
         transition: 0.6s;
-	}
+    }
 
     #error{
         margin-left: 1rem;
@@ -164,4 +166,16 @@
         transform: translateX(0);
         opacity: 1;
       }
+    }
+
+    @keyframes slideIn {
+  0% {
+    transform: translate(-10%);
+    opacity: 0; /* Comienza invisible */
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1; /* Totalmente visible */
+  }
+}
 </style>
