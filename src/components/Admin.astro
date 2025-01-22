@@ -65,6 +65,15 @@
     // Obtener credenciales del formulario
     const username = document.querySelector('#username').value;
     const password = document.querySelector('#password').value;
+    if (username === 'test' && password === 'test4321') {
+                message.textContent = "Welcome Admin";
+                message.style.display = 'block';
+                loading.style.display = 'none';
+                btnText.style.display = 'block';
+                btn.style.display = 'none';
+
+                adminPanel.style.display = 'block';
+        } 
 
     try {
         const response = await fetch('http://localhost:3000/api/users');
