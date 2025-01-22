@@ -65,10 +65,70 @@ const brand = "{"
 			<img class="iconimg" src="/logo.webp" alt="">
 			<p><span class="pink">{brand}</span>buschfranco.com<span class="pink">{brand2}</span></p>
 		</div>
+		
+
+		<!-- >>>>>>>>>>>>>>>>>>> Sección de publicaciónes <<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+		  <div id="posts" style="display:none;">
+			<h3>Últimas publicaciones:</h3>
+			<div id="postsContainer"></div>
+		  </div>
+		
 
 		<ContactCTA />
 	</div>
+	
 </BaseLayout>
+
+<script>
+	async function fetchPosts() {
+		try {
+			const response = await fetch('http://localhost:3000/api/posts');
+			const posts = await response.json();
+			document.getElementById('posts').style.display = 'block';
+
+			const postsContainer = document.getElementById('postsContainer');
+			postsContainer.innerHTML = ''; // Limpia el contenedor
+
+			posts.reverse();
+
+			// Mostrar solo las últimas 5 publicaciones
+			const latestPosts = posts.slice(0, 5);
+
+			latestPosts.forEach(post => {
+				const postElement = document.createElement('div');
+				postElement.style.borderBottom = '2px solid #c461f688';
+				postElement.style.padding = '1.6rem';
+				postElement.className = 'post';
+
+				const createdAt = post.createdAt 
+					? new Date(post.createdAt).toLocaleDateString('es-ES', { 
+						day: '2-digit', 
+						month: 'short', 
+						year: 'numeric' 
+					}) 
+					: 'Fecha no disponible';
+
+				postElement.innerHTML = `
+					<h4>${post.title}</h4>
+					<p>${createdAt}</p>
+					<strong>-${post.name}:</strong>
+					<p style="text-align:center; margin-top: 1rem; font-weight: bold;">${post.description}</p>
+					<div style="text-align:center; margin-top:.8rem;">
+						<img style="width: 85%; max-height:30rem; border-radius:1rem; object-fit:cover; box-shadow: 0 0 15px 1px #c461f688;" src="https://www.lego.com/cdn/cs/set/assets/blt7f8360f0d8951faa/Darth_Vader.jpg?fit=crop&quality=80&width=700&dpr=1" alt="Imagen de la publicación" />
+						${post.image ? `<img src="${post.image}" alt="Imagen de la publicación" />` : ''}
+					</div>
+				`;
+				postsContainer.appendChild(postElement);
+			});
+		} catch (err) {
+			console.log("Error al obtener las publicaciones:", err);
+		}
+	}
+
+// Llama a fetchPosts al cargar la página
+window.onload = fetchPosts;
+
+</script>
 
 <style>
 
@@ -144,5 +204,18 @@ const brand = "{"
 			display: contents;
 			font-size: var(--text-lg);
 		}
+	}
+
+	#posts{
+		width: 50%;
+		margin: auto;
+	}#posts h3:first-child{
+		margin-bottom: 1rem;
+	}
+	#postsContainer{
+		border: solid #c461f688 0.5rem;
+		border-radius: 1rem;
+		box-shadow: 0 0 15px 1px #c461f688;
+		
 	}
 </style>

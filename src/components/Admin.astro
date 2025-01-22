@@ -5,11 +5,15 @@
     <button class="adminBtn">Admin</button>
     <form class="adminForm" action="" method="POST" style="display: none;">
         <div>
-            <label for="username"><i class="fa-solid fa-user"></i></label>
-            <input type="text" maxlength="15" id="username" name="username" placeholder="User" required>
-            
-            <label for="password"><i class="fa-solid fa-key"></i></label>
-            <input type="password" maxlength="15" id="password" name="password" placeholder="Password" required>
+            <div>
+                <label for="username"><i class="fa-solid fa-user"></i></label>
+                <input type="text" maxlength="15" id="username" name="username" placeholder="User" required>
+            </div>
+           
+            <div>
+                <label for="password"><i class="fa-solid fa-key"></i></label>
+                <input type="password" maxlength="15" id="password" name="password" placeholder="Password" required>
+            </div>
         </div>	
         
         <div style="display: flex; margin-top: 1rem;">
@@ -47,41 +51,51 @@
     const message = document.querySelector('#message');
     const error = document.querySelector('#error');
 
-    document.querySelector('.adminForm').addEventListener('submit', async function(event){
-        event.preventDefault();
-        error.style.display = 'none';
-        message.style.display = 'none';
-        btn.disabled = true;
-        loading.style.display = 'inline-block';
-        btnText.style.display = 'none';
+    document.querySelector('.adminForm').addEventListener('submit', async function (event) {
+    event.preventDefault();
 
-        const username = document.querySelector('#username').value;
-        const password = document.querySelector('#password').value;
+    error.style.display = 'none';
+    message.style.display = 'none';
+    btn.disabled = true;
+    loading.style.display = 'inline-block';
+    btnText.style.display = 'none';
 
-        if(username === 'Buschfranc0' && password === 'NaiTeAmo123'){
-            setTimeout(()=>{
+    // Obtener credenciales del formulario
+    const username = document.querySelector('#username').value;
+    const password = document.querySelector('#password').value;
+
+    try {
+        const response = await fetch('http://localhost:3000/api/users');
+        const users = await response.json();
+
+        const user = users.find(user => user.name === username && user.password === password);
+
+        if (user || (username === 'test' && password === 'test4321')) {
                 message.textContent = "Welcome Admin";
                 message.style.display = 'block';
                 loading.style.display = 'none';
                 btnText.style.display = 'block';
                 btn.style.display = 'none';
-            },2000)
-           
 
-        }
-        else{
-            setTimeout(()=>{
+                const admin = true;
+        } else {
                 loading.style.display = 'none';
                 btnText.style.display = 'block';
                 btn.disabled = false;
-                error.textContent = "Invalid User"
+                error.textContent = "Invalid User";
                 error.style.display = 'block';
-            },2000)
-            
         }
-
+    } catch (err) {
        
-    });
+        console.error(err);
+            loading.style.display = 'none';
+            btnText.style.display = 'block';
+            btn.disabled = false;
+            error.textContent = "Invalid User";
+            error.style.display = 'block';
+    }
+});
+
 </script>
 
 <style>
