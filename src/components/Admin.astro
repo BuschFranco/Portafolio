@@ -3,7 +3,7 @@
 
 <div class="adminContainer">
     <button class="adminBtn">Admin</button>
-    <form class="adminForm" action="" method="POST" style="display: none;">
+    <form class="adminForm" style="display: none;">
         <div>
             <div>
                 <label for="username"><i class="fa-solid fa-user"></i></label>
@@ -60,6 +60,8 @@
     loading.style.display = 'inline-block';
     btnText.style.display = 'none';
 
+    const adminPanel = document.querySelector('.adminPanel');
+
     // Obtener credenciales del formulario
     const username = document.querySelector('#username').value;
     const password = document.querySelector('#password').value;
@@ -77,6 +79,7 @@
                 btnText.style.display = 'block';
                 btn.style.display = 'none';
 
+                adminPanel.style.display = 'block';
                 const admin = true;
         } else {
                 loading.style.display = 'none';

@@ -1,0 +1,177 @@
+---
+---
+
+<div class="adminPanel" style="display: none;">
+    <button class="adminPanelBtn">Admin Panel</button>
+    <form class="adminPanelForm" method="POST" style="display: none;">
+        <div>
+            <strong>Create a post</strong>
+            <div>
+                <label for="title">Ttile:</label>
+                <input type="text" maxlength="15" id="title" name="title" placeholder="Title" required>
+            </div>
+           
+            <div>
+                <label for="description">Desc:</label>
+                <textarea id="description" name="description" maxlength="500" placeholder="Description" required></textarea>
+            </div>
+            <div>
+                <label for="file">Image:</label>
+                <input type="file" id="file" name="file" accept="image/*" required>
+            </div>
+        </div>
+        <div>
+            <strong>Update a post</strong>
+            <div>
+                <label for="title">ID:</label>
+                <input type="text" maxlength="15" id="title" name="title" placeholder="Post ID" required>
+            </div>
+            <div>
+                <label for="title">Ttile:</label>
+                <input type="text" maxlength="15" id="title" name="title" placeholder="Title" required>
+            </div>
+           
+            <div>
+                <label for="description">Desc:</label>
+                <textarea id="description" name="description" maxlength="500" placeholder="Description" required></textarea>
+            </div>
+            <div>
+                <label for="file">Image:</label>
+                <input type="file" id="file" name="file" accept="image/*" required>
+            </div>
+        </div>
+        <div>
+            <strong>Delete a post</strong>
+            <div>
+                <label for="title">ID:</label>
+                <input type="text" maxlength="15" id="title" name="title" placeholder="Post ID" required>
+            </div>
+        </div>			
+        
+        <div style="display: flex; margin-top: 1rem;">
+            <button type="submit">
+                <span class="button-text">Upload / Update</span>
+                <span class="loading-spinner" style="display: none;"></span>
+            </button>
+            <p id="message" style="display: none;"></p>
+            <p id="error" style="display: none;"></p>
+        </div>
+</div>
+
+<script>
+    document.querySelector('.adminPanelBtn').addEventListener('click', function(event){
+		event.preventDefault();
+		const form = document.querySelector('.adminPanelForm');
+		form.style.display = form.style.display === 'block' ? 'none' : 'block';
+	});
+
+	document.addEventListener('click', function(event) {
+		const form = document.querySelector('.adminPanelForm');
+		const adminBtn = document.querySelector('.adminPanelBtn');
+		if (form.style.display === 'block' && !form.contains(event.target) && !adminBtn.contains(event.target)) {
+			form.style.display = 'none';
+		}
+	});
+</script>
+
+<style>
+     .adminPanel{
+        position: absolute;
+        top: 6rem;
+        left: 8rem;
+        width: auto;
+        z-index: 9999;
+    }
+
+    .adminPanelBtn{
+        border-radius: .9rem;
+        padding: .7rem 1rem;
+        font-weight: bold;
+        border: 2px solid #c561f6;
+        color: #222;
+        box-shadow: 0 0 10px 1px #c561f6;
+    }
+
+    .adminPanelForm{
+        color:  #c561f6;
+        background-color: #1e0e27;
+        padding: 1rem;
+        border-radius: 0rem 1rem 1rem 1rem;
+        margin-left: .5rem;
+        box-shadow: 0 0 10px 2px #c561f6;
+        width: 25rem;
+
+        animation: slideLeftFadeIn 1s;
+    
+    }.adminPanelForm input{
+        border-radius: .4rem;
+        padding: .1rem;
+        margin-top: .5rem;
+        width: 80%;
+        margin-left: .8rem;
+        text-align: center;
+        border: none;
+    }.adminPanelForm textarea{
+        width: 80%;
+        height: 100px;
+        margin-left: .8rem;
+        border-radius: .4rem;
+        padding: .1rem;
+        text-align: center;
+        border: none;
+    }.adminPanelForm button{
+        border-radius: .4rem;
+        border: none;
+        padding: .3rem 1rem;
+        background-color: white;
+        color: #1e0e27;
+        font-weight: bold;
+        box-shadow: 0 0 10px 1px #c561f6;
+        transition: 0.6s;
+    }
+
+    #error{
+        margin-left: 1rem;
+        color: red;
+        font-weight: bold;
+
+        animation: slideLeftFadeIn 1.4s;
+    }#message{
+        margin: auto;
+        color: rgb(0, 255, 0);
+        font-weight: bold;
+
+        animation: slideLeftFadeIn 1.4s;
+    }
+
+     /* >>>>>>>>>>>> Animaciones para botones y cargas <<<<<<<<<<<<<<<< */
+
+  .loading-spinner {
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-top: 3px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    animation: spin 0.8s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+  }@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes slideLeftFadeIn {
+      0% {
+        transform: translateX(-3.5rem);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+</style>

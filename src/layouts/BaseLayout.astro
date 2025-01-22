@@ -7,6 +7,7 @@ import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import Admin from '../components/Admin.astro';
+import AdminPanel from '../components/AdminPanel.astro';
 
 interface Props {
 	title?: string | undefined;
@@ -36,6 +37,7 @@ const {currentLocale} = Astro;
 		<div class="stack backgrounds">
 			<Nav />
 			<Admin />
+			<AdminPanel />
 			<slot />
 			<Footer />
 		</div>
