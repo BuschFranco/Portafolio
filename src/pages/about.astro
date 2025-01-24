@@ -117,6 +117,7 @@ const brand = "{"
 						<img style="width: 85%; max-height:30rem; border-radius:1rem; object-fit:cover; box-shadow: 0 0 15px 1px #c461f688;" src="https://www.lego.com/cdn/cs/set/assets/blt7f8360f0d8951faa/Darth_Vader.jpg?fit=crop&quality=80&width=700&dpr=1" alt="Imagen de la publicación" />
 						${post.image ? `<img src="${post.image}" alt="Imagen de la publicación" />` : ''}
 					</div>
+					<input type="hidden" name="postId" value="${post._id}" />
 				`;
 				postsContainer.appendChild(postElement);
 			});

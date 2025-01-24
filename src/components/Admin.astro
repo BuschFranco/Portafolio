@@ -90,7 +90,7 @@
                 btn.style.display = 'none';
 
                 adminPanel.style.display = 'block';
-                const admin = true;
+                localStorage.setItem('isAdmin', 'true');
         } else {
                 loading.style.display = 'none';
                 btnText.style.display = 'block';
@@ -108,6 +108,10 @@
             error.style.display = 'block';
     }
 });
+
+if(localStorage.getItem('isAdmin') === 'true'){
+    document.querySelector('.adminPanel').style.display = 'block';
+}
 
 </script>
 

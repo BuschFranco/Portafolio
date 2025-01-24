@@ -3,65 +3,81 @@
 
 <div class="adminPanel" style="display: none;">
     <button class="adminPanelBtn">Admin Panel</button>
-    <form class="adminPanelForm" method="POST" style="display: none;">
+    <div id="adminPanelContainer" style="display: none;">
+
+    
+    <form class="adminPanelForm" method="POST" >
         <div>
             <strong>Create a post</strong>
             <div>
                 <label for="title">Ttile:</label>
-                <input type="text" maxlength="15" id="title" name="title" placeholder="Title" required>
+                <input type="text" maxlength="15" id="createTitle" name="title" placeholder="Title" required>
             </div>
            
             <div>
                 <label for="description">Desc:</label>
-                <textarea id="description" name="description" maxlength="500" placeholder="Description" required></textarea>
+                <textarea class="description" name="description" maxlength="500" placeholder="Description" required></textarea>
             </div>
             <div>
                 <label for="file">Image:</label>
-                <input type="file" id="file" name="file" accept="image/*" required>
+                <input type="file" id="file" name="file" accept="image/*">
             </div>
+        </div>    
+        <input type="hidden" name="name" value="Busch Franco">
+        <button type="submit">
+            <span class="button-text">Upload</span>
+            <span class="loading-spinner" style="display: none;"></span>
+        </button>
+    </form>
+    <form class="adminPanelForm" method="PUT" action="">
+        <div>
+        <strong>Update a post</strong>
+        <div>
+            <label for="id">ID:</label>
+            <input type="text" class="id" name="id" placeholder="Post ID" required>
         </div>
         <div>
-            <strong>Update a post</strong>
-            <div>
-                <label for="title">ID:</label>
-                <input type="text" maxlength="15" id="title" name="title" placeholder="Post ID" required>
-            </div>
-            <div>
-                <label for="title">Ttile:</label>
-                <input type="text" maxlength="15" id="title" name="title" placeholder="Title" required>
-            </div>
-           
-            <div>
-                <label for="description">Desc:</label>
-                <textarea id="description" name="description" maxlength="500" placeholder="Description" required></textarea>
-            </div>
-            <div>
-                <label for="file">Image:</label>
-                <input type="file" id="file" name="file" accept="image/*" required>
-            </div>
+            <label for="title">Ttile:</label>
+            <input type="text" maxlength="15" class="title" name="title" placeholder="Title" required>
+        </div>
+       
+        <div>
+            <label for="description">Desc:</label>
+            <textarea class="updateDescription" name="description" maxlength="500" placeholder="Description" required></textarea>
         </div>
         <div>
-            <strong>Delete a post</strong>
+            <label for="file">Image:</label>
+            <input type="file" id="file" name="file" accept="image/*">
+        </div>
+    </div>
+    <button type="submit">
+        <span class="button-text">Update</span>
+        <span class="loading-spinner" style="display: none;"></span>
+    </button>
+</form>
+        <form class="adminPanelForm" method="DELETE">
             <div>
-                <label for="title">ID:</label>
-                <input type="text" maxlength="15" id="title" name="title" placeholder="Post ID" required>
-            </div>
-        </div>			
-        
-        <div style="display: flex; margin-top: 1rem;">
+                <strong>Delete a post</strong>
+                <div>
+                    <label for="deleteid">ID:</label>
+                    <input type="text" id="deleteid" name="deleteid" placeholder="Post ID" required>
+                </div>
+            </div>			
+
             <button type="submit">
-                <span class="button-text">Upload / Update</span>
+                <span class="button-text">Delete</span>
                 <span class="loading-spinner" style="display: none;"></span>
             </button>
-            <p id="message" style="display: none;"></p>
-            <p id="error" style="display: none;"></p>
-        </div>
+        </form>
+    </div>
 </div>
 
 <script>
+    
+
     document.querySelector('.adminPanelBtn').addEventListener('click', function(event){
 		event.preventDefault();
-		const form = document.querySelector('.adminPanelForm');
+		const form = document.querySelector('#adminPanelContainer');
 		form.style.display = form.style.display === 'block' ? 'none' : 'block';
 	});
 
@@ -72,6 +88,103 @@
 			form.style.display = 'none';
 		}
 	});
+
+    
+    // Función para manejar las peticiones al API
+async function sendRequest(url, method, data) {
+    try {
+        const response = await fetch(url, {
+            method: method,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP Error: ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log(result);
+        alert(`${method} request successful!`);
+        return result;
+    } catch (error) {
+        console.error(error);
+        alert(`Error: ${error.message}`);
+    }
+}
+
+// Crear un post
+document.querySelector('.adminPanelForm[method="POST"]').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const title = document.querySelector('#createTitle').value;
+    const description = document.querySelector('.description').value;
+    const name = document.querySelector('input[name="name"]').value;
+    const file = document.querySelector('#file').files[0];
+
+    
+    const data = {
+            title: title,
+            description: description,
+            name: name,
+        };
+
+        sendRequest('http://localhost:3000/api/posts', 'POST', data);
+    
+});
+
+        const response = await fetch('http://localhost:3000/api/posts');
+        const posts = await response.json();
+
+        //const user = users.find(user => user.name === username && user.password === password);
+
+// Actualizar un post
+document.querySelector('.adminPanelForm[method="PUT"]').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const id = document.querySelector('.id').value;
+    const title = document.querySelector('.title').value; // Segundo input de título
+    const description = document.querySelector('.updateDescription').value;
+    
+        const data = {
+            title: title,
+            description: description,
+        };
+
+        sendRequest(`http://localhost:3000/api/posts/${id}`, 'PUT', data);
+});
+
+// Eliminar un post
+document.querySelector('.adminPanelForm[method="DELETE"]').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const id = document.querySelector('#deleteid').value;
+    const method = 'DELETE';
+
+    try {
+        const response = await fetch(`http://localhost:3000/api/posts/${id}`, {
+            method: method,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP Error: ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log(result);
+        alert(`${method} request successful!`);
+        return result;
+    } catch (error) {
+        console.error(error);
+        alert(`Error: ${error.message}`);
+    }
+});
+
 </script>
 
 <style>
