@@ -75,14 +75,18 @@
                 adminPanel.style.display = 'block';
                 return;
         } 
-
-    try {
-        const response = await fetch('http://localhost:3000/api/users');
-        const users = await response.json();
-
-        const user = users.find(user => user.name === username && user.password === password);
-
-        if (user || (username === 'test' && password === 'test4321')) {
+        try {
+            const response = await fetch('http://localhost:3000/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name:username, password:password }),
+                credentials: 'include', // Envía cookies junto con la solicitud
+            });
+            const { data: user } = await response.json();
+            console.log(user);
+            if (response.status === 200) {
                 message.textContent = "Welcome Admin";
                 message.style.display = 'block';
                 loading.style.display = 'none';
@@ -90,15 +94,14 @@
                 btn.style.display = 'none';
 
                 adminPanel.style.display = 'block';
-                localStorage.setItem('isAdmin', 'true');
-        } else {
+            } else {
                 loading.style.display = 'none';
                 btnText.style.display = 'block';
                 btn.disabled = false;
                 error.textContent = "Invalid User";
                 error.style.display = 'block';
-        }
-    } catch (err) {
+            }
+        } catch (err) {
        
         console.error(err);
             loading.style.display = 'none';
@@ -108,10 +111,6 @@
             error.style.display = 'block';
     }
 });
-
-if(localStorage.getItem('isAdmin') === 'true'){
-    document.querySelector('.adminPanel').style.display = 'block';
-}
 
 </script>
 
