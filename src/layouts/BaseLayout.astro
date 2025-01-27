@@ -43,18 +43,18 @@ const {currentLocale} = Astro;
 		</div>
 
 		<script>
-			fetch("http://localhost:3000/api/validate-session", {
-                    method: "POST",
-                    credentials: "include" // Esto envía las cookies
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (!data.active) {
-                            alert("Sesión expirada. Por favor, inicia sesión nuevamente.");
+			//fetch("http://localhost:3000/api/validate-session", {
+                    //method: "POST",
+                    //credentials: "include" // Esto envía las cookies
+                //})
+                    //.then(response => response.json())
+                    //.then(data => {
+                        //if (!data.active) {
+                            //alert("Sesión expirada. Por favor, inicia sesión nuevamente.");
                             // Opcional: redirigir al login
                             //window.location.href = "/login";
-                        }
-                    });
+                        //}
+                    //});
 		</script>
 
 		<script>
