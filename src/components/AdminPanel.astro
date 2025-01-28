@@ -216,7 +216,17 @@ document.querySelector('.adminPanelForm[method="DELETE"]').addEventListener('sub
 
         animation: slideLeftFadeIn 1s;
     
-    }.adminPanelForm input{
+    }
+
+    @media (max-width: 768px) {
+        .adminPanelForm {
+            width: 100%;
+            margin-left: 0;
+            animation: none;
+        }
+    }
+
+    .adminPanelForm input{
         border-radius: .4rem;
         padding: .1rem;
         margin-top: .5rem;

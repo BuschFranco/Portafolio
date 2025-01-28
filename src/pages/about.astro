@@ -210,13 +210,19 @@ window.onload = fetchPosts;
 	#posts{
 		width: 50%;
 		margin: auto;
-	}#posts h3:first-child{
+	}
+	#posts h3:first-child{
 		margin-bottom: 1rem;
 	}
 	#postsContainer{
 		border: solid #c461f688 0.5rem;
 		border-radius: 1rem;
 		box-shadow: 0 0 15px 1px #c461f688;
-		
+	}
+
+	@media (max-width: 1010px) {
+		#posts {
+			width: 90%;
+		}
 	}
 </style>
