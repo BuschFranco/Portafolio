@@ -84,10 +84,10 @@
                 body: JSON.stringify({ name:username, password:password }),
                 credentials: 'include', // Envía cookies junto con la solicitud
             });
-            const { data: user } = await response.json();
-            console.log(user);
+            const result = await response.json();
+            console.log(result.user);
             if (response.status === 200) {
-                message.textContent = "Welcome Admin";
+                message.textContent = `Welcome ${result.user.name}`;
                 message.style.display = 'block';
                 loading.style.display = 'none';
                 btnText.style.display = 'block';

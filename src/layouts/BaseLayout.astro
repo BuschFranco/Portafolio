@@ -43,18 +43,21 @@ const {currentLocale} = Astro;
 		</div>
 
 		<script>
-			//fetch("http://localhost:3000/api/validate-session", {
-                    //method: "POST",
-                    //credentials: "include" // Esto envía las cookies
-                //})
-                    //.then(response => response.json())
-                    //.then(data => {
-                        //if (!data.active) {
-                            //alert("Sesión expirada. Por favor, inicia sesión nuevamente.");
-                            // Opcional: redirigir al login
-                            //window.location.href = "/login";
-                        //}
-                    //});
+			 		try {
+						const response = await fetch(`http://localhost:3000/api/validate-session`, {
+							method: "POST",
+							credentials: "include",
+						});
+						await response.json();
+
+						if(response.status === 200){
+							document.querySelector('.adminPanel').style.display = "block";
+						}else{
+							console.log("Sesión expirada, por favor inicie sesión nuevamente.")
+						}
+					} catch (error) {
+						
+					}
 		</script>
 
 		<script>
