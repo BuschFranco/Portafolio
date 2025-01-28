@@ -4,7 +4,7 @@
 <div class="adminContainer">
     <button class="adminBtn">Admin</button>
     <form class="adminForm" style="display: none;">
-        <div>
+        <div class="adminFormData">
             <div>
                 <label for="username"><i class="fa-solid fa-user"></i></label>
                 <input type="text" maxlength="15" id="username" name="username" placeholder="User" required>
@@ -21,6 +21,7 @@
                 <span class="button-text">Access</span>
                 <span class="loading-spinner" style="display: none;"></span>
             </button>
+            <button id="quitSesion" style="display: none;">Bye</button>
             <p id="message" style="display: none;"></p>
             <p id="error" style="display: none;"></p>
         </div>
@@ -47,6 +48,9 @@
     const loading = document.querySelector('.loading-spinner');
     const btnText = document.querySelector('.button-text');
     const btn = document.querySelector('.adminForm button');
+    const quitBtn = document.getElementById('quitSesion');
+
+    const adminFormData = document.querySelector(".adminFormData");
 
     const message = document.querySelector('#message');
     const error = document.querySelector('#error');
@@ -92,6 +96,8 @@
                 loading.style.display = 'none';
                 btnText.style.display = 'block';
                 btn.style.display = 'none';
+                adminFormData.style.display = 'none';
+                quitBtn.style.display = 'block';
 
                 adminPanel.style.display = 'block';
             } else {
@@ -111,6 +117,13 @@
             error.style.display = 'block';
     }
 });
+
+    quitBtn.addEventListener('click',  function(){
+        document.cookie.split(";").forEach(function(c) { 
+            document.cookie = c.trim().split("=")[0] + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/"; 
+        });
+        location.reload();
+    });
 
 </script>
 
@@ -169,6 +182,7 @@
         animation: slideLeftFadeIn 1.4s;
     }#message{
         margin: auto;
+        margin-left: 1rem;
         color: rgb(0, 255, 0);
         font-weight: bold;
 
