@@ -5,4 +5,4 @@
 ## Contacto
 
 - **Email:** contacto@buschfranco.com
-- **LinkedIn:** [Franco Busch](https://www.linkedin.com/in/franco-busch)
+- **LinkedIn:** [Franco Busch](https://www.linkedin.com/in/francobusch/)
