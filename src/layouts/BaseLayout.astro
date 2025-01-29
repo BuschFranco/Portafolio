@@ -43,21 +43,28 @@ const {currentLocale} = Astro;
 		</div>
 
 		<script>
-			 		try {
+			document.addEventListener("DOMContentLoaded", async ()=>{
+				try {
 						const response = await fetch(`http://localhost:3000/api/validate-session`, {
 							method: "POST",
 							credentials: "include",
 						});
-						await response.json();
-
+						const user = await response.json();
 						if(response.status === 200){
 							document.querySelector('.adminPanel').style.display = "block";
+							document.querySelector('.adminForm button').style.display = "none"
+    						document.getElementById('quitSesion').style.display = "block"
+    						document.querySelector(".adminFormData").style.display = "none"
+							document.querySelector('#message').textContent = `Welcome ${user.user.username}`
+							document.querySelector('#message').style.display = "block"
 						}else{
 							console.log("Sesión expirada, por favor inicie sesión nuevamente.")
 						}
 					} catch (error) {
 						
 					}
+			})
+			 		
 		</script>
 
 		<script>

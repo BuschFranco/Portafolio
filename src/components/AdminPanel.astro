@@ -19,8 +19,8 @@
                 <textarea class="description" name="description" maxlength="500" placeholder="Description" required></textarea>
             </div>
             <div>
-                <label for="file">Image:</label>
-                <input type="file" id="file" name="file" accept="image/*">
+                <label for="filePOST">Image:</label>
+                <input type="file" id="filePOST" name="filePOST" accept="image/*">
             </div>
         </div>    
         <input type="hidden" name="name" value="Busch Franco">
@@ -46,8 +46,8 @@
             <textarea class="updateDescription" name="description" maxlength="500" placeholder="Description" required></textarea>
         </div>
         <div>
-            <label for="file">Image:</label>
-            <input type="file" id="file" name="file" accept="image/*">
+            <label for="filePUT">Image:</label>
+            <input type="file" id="filePUT" name="filePUT" accept="image/*">
         </div>
     </div>
     <button type="submit">
@@ -122,13 +122,14 @@ document.querySelector('.adminPanelForm[method="POST"]').addEventListener('submi
     const title = document.querySelector('#createTitle').value;
     const description = document.querySelector('.description').value;
     const name = document.querySelector('input[name="name"]').value;
-    const file = document.querySelector('#file').files[0];
+    const file = document.querySelector('#filePOST').files[0];
 
     
     const data = {
             title: title,
             description: description,
             name: name,
+            image: file,
         };
 
         sendRequest('http://localhost:3000/api/posts', 'POST', data);
@@ -138,19 +139,19 @@ document.querySelector('.adminPanelForm[method="POST"]').addEventListener('submi
         const response = await fetch('http://localhost:3000/api/posts');
         const posts = await response.json();
 
-        //const user = users.find(user => user.name === username && user.password === password);
-
 // Actualizar un post
 document.querySelector('.adminPanelForm[method="PUT"]').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const id = document.querySelector('.id').value;
-    const title = document.querySelector('.title').value; // Segundo input de título
+    const title = document.querySelector('.title').value; 
     const description = document.querySelector('.updateDescription').value;
+    const file = document.querySelector('#filePUT').files[0];
     
         const data = {
             title: title,
             description: description,
+            image: file,
         };
 
         sendRequest(`http://localhost:3000/api/posts/${id}`, 'PUT', data);
