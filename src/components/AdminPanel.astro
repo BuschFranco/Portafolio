@@ -91,8 +91,11 @@
 
     
     // Función para manejar las peticiones al API
+const accessToken = document.cookie.split('; ').find(row => row.startsWith('access_token='));
 async function sendRequest(url, method, data) {
-    try {
+   
+    if (accessToken) {
+        try {
         const response = await fetch(url, {
             method: method,
             headers: {
@@ -106,13 +109,14 @@ async function sendRequest(url, method, data) {
         }
 
         const result = await response.json();
-        console.log(result);
         alert(`${method} request successful!`);
         return result;
     } catch (error) {
         console.error(error);
         alert(`Error: ${error.message}`);
     }
+    }
+   
 }
 
 // Crear un post
@@ -131,13 +135,10 @@ document.querySelector('.adminPanelForm[method="POST"]').addEventListener('submi
             name: name,
             image: file,
         };
-
+        
         sendRequest('http://localhost:3000/api/posts', 'POST', data);
     
 });
-
-        const response = await fetch('http://localhost:3000/api/posts');
-        const posts = await response.json();
 
 // Actualizar un post
 document.querySelector('.adminPanelForm[method="PUT"]').addEventListener('submit', function (event) {
@@ -163,8 +164,8 @@ document.querySelector('.adminPanelForm[method="DELETE"]').addEventListener('sub
 
     const id = document.querySelector('#deleteid').value;
     const method = 'DELETE';
-
-    try {
+    if (accessToken){
+        try {
         const response = await fetch(`http://localhost:3000/api/posts/${id}`, {
             method: method,
             headers: {
@@ -184,6 +185,8 @@ document.querySelector('.adminPanelForm[method="DELETE"]').addEventListener('sub
         console.error(error);
         alert(`Error: ${error.message}`);
     }
+    }
+    
 });
 
 </script>
