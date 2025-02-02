@@ -115,6 +115,8 @@ async function sendRequest(url, method, data) {
         console.error(error);
         alert(`Error: ${error.message}`);
     }
+    }else{
+        alert("Necesitas iniciar sesión")
     }
    
 }
@@ -185,6 +187,8 @@ document.querySelector('.adminPanelForm[method="DELETE"]').addEventListener('sub
         console.error(error);
         alert(`Error: ${error.message}`);
     }
+    }else{
+        alert("Necesitas iniciar sesión")
     }
     
 });
